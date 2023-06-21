@@ -1,0 +1,55 @@
+1 - select synonym, callsStar wildcard wildcard
+procedure p;
+Select p such that Calls*(_, _)
+cl455r00m, fru1t5, dr1nk5, on3l1n3
+5000
+2 - select synonym, callsStar procName synonym
+procedure p;
+Select p such that Calls*("cl455r00m", p)
+fru1t5, dr1nk5, on3l1n3
+5000
+3 - select synonym, callsStar procName synonym
+procedure p;
+Select p such that Calls*("dr1nk5", p)
+on3l1n3
+5000
+4 - select synonym, callsStar procName synonym
+procedure p;
+Select p such that Calls*("on3l1n3", p)
+none
+5000
+5 - select synonym, callsStar synonym procName
+procedure p;
+Select p such that Calls*(p, "cl455r00m")
+none
+5000
+6 - select synonym, callsStar synonym procName
+procedure p;
+Select p such that Calls*(p, "dr1nk5")
+cl455r00m, fru1t5
+5000
+7 - select synonym, callsStar synonym procName
+procedure p;
+Select p such that Calls*(p, "on3l1n3")
+cl455r00m, fru1t5, dr1nk5
+5000
+8 - select synonym, callsStar synonym synonym
+procedure p, q;
+Select p such that Calls*(p, q)
+cl455r00m, fru1t5, dr1nk5
+5000
+9 - select synonym, callsStar synonym synonym
+procedure p, q;
+Select q such that Calls*(p, q)
+fru1t5, dr1nk5, on3l1n3
+5000
+10 - select boolean, callsStar procName procName
+
+Select BOOLEAN such that Calls*("cl455r00m", "on3l1n3")
+TRUE
+5000
+11 - select boolean, callsStar procName procName
+
+Select BOOLEAN such that Calls*("on3l1n3", "cl455r00m")
+FALSE
+5000

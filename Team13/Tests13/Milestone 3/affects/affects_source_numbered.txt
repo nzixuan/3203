@@ -1,0 +1,339 @@
+procedure A {
+	print x; \\ 1
+	\\ Test if stmt
+	if (x == 1) then { \\ 2
+		read y; \\ 3
+	} else {
+		read z; \\ 4
+	}
+	\\ Test while stmt
+	while (x == 0) { \\ 5
+		read a; \\ 6
+	}
+	\\ Test while stmt nested in if-then stmt
+	if (x == 0) then { \\ 7
+		while (x == 0) { \\ 8
+			read b; \\ 9
+		}
+	} else {
+		read c; \\ 10
+	}
+	\\ Test while stmt nested in if-else stmt
+	if (x == 0) then { \\ 11
+		read c; \\ 12
+	} else {
+		while (x == 0) { \\ 13
+			read b; \\ 14
+		}
+	}
+	\\ Test if stmt nested in while stmt 
+	while (x == 1) { \\ 15
+		if (y == 2) then { \\ 16
+			z = 3 + 2 - x; \\ 17
+		} else {
+			x = 5; \\ 18
+		}
+	}
+	\\ Test if stmt nested in while stmt with one line after if block
+	while (x == 0) { \\ 19
+		if (x == 0) then { \\ 20
+			read x; \\ 21
+		} else {
+			read d; \\ 22
+		}
+		print k; \\ 23
+	}
+	\\ Test if stmt nested in if-then stmt
+	if (x == 0) then { \\ 24
+		if (x == 0) then { \\ 25
+			read y; \\ 26
+		} else {
+			read z; \\ 27
+		}
+	} else {
+		read z; \\ 28
+	}
+	\\ Test if stmt nested in if-else stmt
+	if (x == 0) then { \\ 29
+		read x; \\ 30
+	} else {
+		if (x == 0) then { \\ 31
+			read y; \\ 32
+		} else {
+			read z; \\ 33
+		}
+	}
+	\\ Test if stmt nested in both if-then and if-else stmts
+	if (x == 0) then { \\ 34
+		if (q == 213) then { \\ 35
+			read y; \\ 36
+		} else {
+			read z; \\ 37
+		}
+	} else {
+		if (r == 22) then { \\ 38
+			print y; \\ 39
+		} else {
+			read z; \\ 40
+		}
+	}
+	\\ Test if stmt nested in if-then stmt with one line after if stmt
+	if (x == 0) then { \\ 41
+		if (x == 0) then { \\ 42
+			read y; \\ 43
+		} else {
+			read z; \\ 44
+		}
+		print xyz; \\ 45
+	} else {
+		read z; \\ 46
+	}
+	\\ Test if stmt nested in if-else stmt with next line after if stmt
+	if (x == 0) then { \\ 47
+		read x; \\ 48
+	} else {
+		if (x == 0) then { \\ 49
+			read y; \\ 50
+		} else {
+			read z; \\ 51
+		}
+		print xyz; \\ 52
+	}
+	\\ Test if stmt nested in if stmt with next line after both if-then and if-else stmts
+	if (x == 0) then { \\ 53
+		if (x == 0) then { \\ 54
+			read y; \\ 55
+		} else {
+			read z; \\ 56
+		}
+		print xyz; \\ 57
+	} else {
+		if (x == 0) then { \\ 58
+			read y; \\ 59
+		} else {
+			read z; \\ 60
+		}
+		print xyz; \\ 61
+	}
+	\\ Test if stmt nested if stmt nested in while stmt
+	while (p == (10 + l)) { \\ 62
+		if ((o == 0) && (b == 6)) then { \\ 63
+			if (k == 1) then { \\ 64
+				fas = 0; \\ 65
+			} else {
+				fass = 1; \\ 66
+			}
+		} else {
+			if (q == 2) then { \\ 67
+				foo = 2; \\ 68
+			} else {
+				bar = 3; \\ 69
+			}
+		}
+	}
+	\\ Test while stmt nested in while stmt nested in if stmt
+	if (x == h) then { \\ 70
+		while (w == 3) { \\ 71
+			while (f != 3243) { \\ 72
+				read s; \\ 73
+			}
+		}
+	} else {
+		print k; \\ 74
+	}
+	\\ Test if stmt nested in while stmt nested in if stmt nested in if stmt
+	if (c == d) then { \\ 75
+		if (v == u) then { \\ 76
+			while (t == g) { \\ 77
+				if (d == 2) then { \\ 78
+					print x; \\ 79
+				} else {
+					read y; \\ 80
+				}
+			}
+		} else {
+			a = b; \\ 81
+		}
+	} else {
+		x = 5; \\ 82
+	}
+	\\ Test affects in deep nested loops
+	while ((ss < 0) && (rr > tt) || (mm == 12) && (nn != (bb - aa)) || (kk <= (pp + 1))) { \\ 83
+		m =  (n - p) / 2  +  n; \\84
+		p = 9; \\ 85
+		k = j; \\ 86
+		j = k; \\ 87
+		if (p >=  9)  then { \\ 88
+			p = n;  \\ 89
+			while (k >= n) { \\90
+				aa = aa + 1; \\91
+				aa = aa + 3; \\92
+				while (jj == 11) { \\ 93
+					f = j; \\94
+					if (j > 10) then { \\95
+						f = n + f; \\ 96
+					}
+					else {
+						n = n + f; \\ 97
+					}
+					f = n; \\ 98
+					while (p == n) { \\ 99
+						m = aa + p; \\ 100
+						p = m * m; \\ 101
+						while (m == 0) { \\ 102
+							j = j + k; \\103
+						}
+					}
+					n = k; \\ 104
+				}
+				j = f; \\ 105
+				j = n; \\ 106
+			}
+			p = aa; \\ 107	
+		}
+		else {
+			p = n; \\ 108
+		}
+		p = aa + n; \\ 109
+		n = m + 1; \\ 110
+	}
+	print m; \\ 111 
+	q = m + p; \\ 112
+	m = n - p / 2 + n; \\ 113
+	if  ((q == 11) && (m > 22)) then { \\ 114
+		p = m; \\ 115
+	} else {
+		m = p; \\ 116 
+		n = p; \\ 117
+	}
+	aa = m - p + n + aa; \\ 118
+	x = (a / b) + (a % b) - (a * b); \\ 119
+	n = (o + p - (q + r)) / s - t % (u * v - w) % (x * y / z); \\ 120
+
+	\\ Test affects with single while stmt
+	be = 500; \\121
+	be2 = 501; \\122
+	while (x == 0) { \\ 123
+		is = be + 1; \\ 124
+		in1 = 2; \\ 125
+		out1 = in1+ 2; \\126
+		out2 = in2 + 3; \\127
+		in2 = 1; \\128
+	}
+	af = be2 - 1; \\129
+	af2 = is + 1; \\130
+
+	\\ Test affects with single if stmt
+	be3 = 500; \\131
+	be4 = 501; \\132
+	if  ((q == 11) && (m > 22)) then { \\ 133
+		is2 = be3 - 1; \\134
+	} else {
+		is3 = be4 + 1; \\ 135 
+	}
+	af3 = be3 - 1; \\ 136
+	af4 = is2 + 1; \\137
+
+	\\ Test affects with if nested in while
+	be5 = 500; \\138
+	while(x == 0) { \\139
+		if(x == 0) then { \\140
+			is4 = be5 - 1; \\141
+		} else {
+			x = 0; \\142
+		}
+	}
+
+	while(x == 0) { \\143
+		be6 = 500; \\144 
+		if(x == 0) then { \\145
+			is5 = be6 - 1; \\146
+		} else {
+			x = 0; \\147
+		}
+	}
+
+	while(x == 0) { \\148
+		if(x == 0) then { \\149
+			be7 = 500; \\150
+		} else {
+			x = 0; \\151
+		}
+		is6 = be7 + 1; \\152
+	}
+
+	while(x == 0) { \\153
+		if(x == 0) then { \\154
+			be8 = 500; \\155
+		} else {
+			is7 = be8 + 1; \\ 156
+		}
+	}
+
+	\\ Test affects with while nested in if
+	be9 = 500; \\157
+	if (x == 9) then { \\ 158
+		while (x == 0) { \\159
+			is8 = be9 + 1; \\160
+		}
+	} else {
+		x = 1; \\161
+	}
+
+	be10 = 500; \\162
+	if (x == 9) then { \\163
+		while (x == 0) { \\164
+			x = 0; \\ 165
+		}
+		is9 = be10 + 1; \\ 166
+	} else {
+		x = 1; \\167
+	}
+
+	if (x == 9) then { \\168
+		while (x == 0) { \\169
+			be11 = 500; \\170
+		}
+		is10 = be11 + 1; \\171
+	} else {
+		x = 1; \\172
+	}
+
+	if (x == 9) then { \\173
+		while (x == 0) { \\ 174
+			be12 = 500; \\175
+		}
+	} else {
+		x = 1; \\176
+	}
+	is11 = be12 + 1; \\177
+
+	\\ Test affects with while nested in while
+	while (x == 0) { \\178
+		be13 = 500; \\179
+		while(x == 0) { \\180
+			is12 = be13 + 1; \\181
+		}
+	}
+
+	while (x == 0) { \\182
+		is13 = be14 + 1; \\183
+		while(x == 0) { \\184
+			be14 = 500; \\185
+		}
+	}
+
+	while (x == 0) { \\186
+		while(x == 0) { \\187
+			be15 = 500; \\188
+			is14 = be15 + 1; \\189
+		}
+	}
+
+	while (x == 0) { \\190
+		while(x == 0) { \\191
+			is15 = be16 + 1; \\192
+			be16 = 500; \\193
+		}
+	}
+}

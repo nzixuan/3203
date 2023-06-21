@@ -1,0 +1,114 @@
+1 - Pattern While Simple Valid
+while w;
+Select w pattern w("b00k",_)
+1
+5000
+2 - Pattern while Hard Valid
+while w;
+Select w pattern w("b4n4n4",_)
+16
+5000
+3 - Pattern while Invalid
+while w;
+Select w pattern w("b4n4n4",_,_)
+SyntaxError
+5000
+4 - Pattern while syntax invalid
+while w;
+Select w such that pattern w("b4n4n4",_)
+SyntaxError
+5000
+5 - Pattern no result but valid
+while w;
+Select w pattern w("b4n4n4n4n4",_)
+none
+5000
+6 - Pattern no result but valid
+while w;
+Select BOOLEAN pattern w("b4n4n4n4n4",_)
+FALSE
+5000
+7 - Pattern no result and no declaration of while w;
+
+Select BOOLEAN pattern w("b4n4n4n4n4",_)
+SemanticError
+5000
+8 - Pattern no result but possible keyword
+while w;
+Select BOOLEAN pattern w("and", _)
+FALSE
+5000
+9 - Pattern no result but possible keyword
+while w;
+Select BOOLEAN pattern w("pattern", _)
+FALSE
+5000
+10 - Pattern no result but possible keyword
+while w;
+Select BOOLEAN pattern w("with", _)
+FALSE
+5000
+11 - Pattern no result but possible keyword
+while w;
+Select BOOLEAN pattern w("1", _)
+SyntaxError
+5000
+12 - Pattern no result but possible keyword
+while w;
+Select BOOLEAN pattern w("*", _)
+SyntaxError
+5000
+13 - Pattern no result but possible keyword
+while w;
+Select BOOLEAN pattern w("Select", _)
+FALSE
+5000
+14 - Pattern with spaces in side
+while w;
+Select BOOLEAN pattern w("p3 4r", _)
+SyntaxError
+5000
+15 - Pattern with some spaces in side
+while w;
+Select BOOLEAN pattern w("p3                              4r", _)
+SyntaxError
+5000
+16 - Pattern with variable of if
+while w;
+Select BOOLEAN pattern w("ju1c3", _)
+FALSE
+5000
+17 - Pattern while with no underscore
+while w;
+Select BOOLEAN pattern w("ju1c3")
+SyntaxError
+5000
+18 - Pattern while with no underscore
+while w;
+Select w pattern w("ju1c3")
+SyntaxError
+5000
+19 - Pattern with variable of if
+while w;
+Select BOOLEAN pattern w("ju1c3", _, _, _)
+SyntaxError
+5000
+20 - Pattern with variable of if
+while w;
+Select w pattern w("ju1c3", _, _, _)
+SyntaxError
+5000
+21 - Pattern with variable of w
+while w;
+Select BOOLEAN pattern w("ju1c3", _, _, _
+SyntaxError
+5000
+22 - Pattern with variable of w
+while w;
+Select w pattern w("ju1c3", _, _, _
+SyntaxError
+5000
+
+
+
+

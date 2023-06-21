@@ -1,0 +1,40 @@
+1 - Assign Valid Simple with
+assign a;
+Select BOOLEAN with 1=1
+TRUE
+5000
+2 - Assign InValid Simple with
+assign a;
+Select BOOLEAN with 1==1
+SyntaxError
+5000
+3 - Assign InValid Simple with
+assign a;
+Select BOOLEAN with 1!=1
+SyntaxError
+5000
+4 - Assign Valid hard with
+assign a;
+Select BOOLEAN with 8=a.stmt#
+TRUE
+5000
+5 - Assign Valid Simple with
+assign a; while w;
+Select BOOLEAN with a.stmt#=while.stmt#
+SemanticError
+5000
+6 - Assign Valid Simple with not equals with
+assign a;
+Select BOOLEAN with 1=1000
+FALSE
+5000
+7 - Assign Valid Simple with
+assign a;
+Select BOOLEAN with 1=1=1=1
+SyntaxError
+5000
+8 - Assign Valid Simple with
+assign and;
+Select BOOLEAN with 7=and.stmt#
+TRUE
+5000

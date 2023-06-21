@@ -1,0 +1,145 @@
+procedure ifOnly {
+	if (shirt == pants) then {					// 1
+		call ifAndWhileInsideWhile;				// 2
+		shoes = shoes + (pants * (sandals + 1) / (2 + (3 * ( (4 % 3) + 5) / (heels * 2 + (4 * 3))))) * shirt;		//3
+		call whileInsideIf;						// 4
+		read pants;								// 5
+		call whileOnly;							// 6
+	} else {
+		call ifInsideWhile;						// 7
+		print dress;							// 8
+		call doubleWhile;						// 9
+	}
+	call ifInsideIf;							// 10
+}
+
+procedure whileOnly {
+	while (((one * ((1 + 1) / 1)) + (2 * (two / ((2 + 2) - 2) / 2) * 2)) > three) {				// 11
+		call whileInsideWhileInsideWhile;		// 12
+		call whileInsideWhile;					// 13
+		print two;								// 14
+		call whileInsideIf;						// 15
+		three = three * two * one;				// 16
+		call doubleWhile;						// 17
+	}
+}
+
+procedure ifInsideWhile {
+	while (word > excel) {						// 18
+		if ((4 % ((3 * ((2 * onenote) + 1)) / 3)) == word) then {			// 19
+			call whileOnly;						// 20
+			read onenote;						// 21
+			powerpoint =  excel;				// 22
+			call whileInsideIf;					// 23
+		} else {
+			call whileInsideWhile;				// 24
+		}
+		call doubleWhile;						// 25
+		call ifInsideIf;						// 26
+		powerpoint = excel + 1;					// 27
+		call doubleWhileInsideWhile;			// 28
+		print excel;							// 29
+	}
+}
+
+procedure whileInsideIf {
+	if (red == 1) then {						// 30
+		while (green > 2) {						// 31
+			print green;						// 32
+			call doubleWhileInsideWhile;		// 33
+			green = green * 2;					// 34
+			call whileInsideWhileInsideWhile;	// 35
+		}
+	} else {
+		while (3 == blue) {						// 36
+			call whileInsideWhile;				// 37
+			blue = blue;						// 38
+			read blue;							// 39
+		}
+		call doubleWhile;						// 40
+	}
+}
+
+procedure doubleWhile {
+	while (black != while) {					// 41
+		grey = black;							// 42
+		call whileInsideWhile;					// 43
+		print white;							// 44
+		call whileInsideWhileInsideWhile;		// 45
+	}
+	while (lightgrey > (grey + darkgrey)) {		// 46
+		read darkgrey;							// 47
+		call ifInsideIf;						// 48
+		call doubleWhileInsideWhile;			// 49
+	}
+}
+
+procedure whileInsideWhile {
+	while (circle < square) {					// 50
+		while (triangle == pentagon) {			// 51
+			call doubleWhileInsideWhile;		// 52
+			read triangle;						// 53
+			pentagon = circle + square;			// 54
+		}
+		call whileInsideWhileInsideWhile;		// 55
+	}
+}
+
+procedure ifInsideIf {
+	if (soap == (soap + shampoo)) then {		// 56
+		if ((shampoo - shampoo) == 3) then {	// 57
+			read shampoo;						// 58
+			toothbrush = toothpaste / soap;		// 59
+		} else {
+			print handsoap;						// 60
+		}
+	} else {
+		if (handsoap == handsoap) then {		// 61
+			call whileInsideWhile;				// 62
+		} else {
+			print tissue;						// 63
+			toothbrush = shampoo + soap;		// 64
+		}
+		call whileInsideWhileInsideWhile;		// 65
+	}
+}
+
+procedure whileInsideWhileInsideWhile {
+	while (cow < 1) {							// 66
+		while (chicken == chicken) {			// 67
+			while ((pig - 1) < pig) {			// 68
+				call doubleWhileInsideWhile;	// 69
+				fish = chicken;					// 70
+			}
+		}
+		read chicken;							// 71
+	}
+}
+
+procedure doubleWhileInsideWhile {
+	while (cat < dog) {							// 72
+		while (dog == dog) {					// 73
+			cat = cat + 3;						// 74
+			read dog;							// 75
+			call ifAndWhileInsideWhile;			// 76
+		}
+		while (cat < (cat + 5)) {				// 77
+			print cat;							// 78
+		}
+	}
+}
+
+procedure ifAndWhileInsideWhile {
+	while (coke < pepsi) {						// 79
+		if (pepsi == 5) then {					// 80
+			read pepsi;							// 81
+			print coke;							// 82
+		} else {
+			sprite = fanta;						// 83
+		}
+		while (pepsi < sprite) {				// 84
+			coke = coke - pepsi;				// 85
+			fanta = coke;						// 86
+		}
+	}
+}

@@ -1,0 +1,125 @@
+1 - select boolean, affects stmtNumber stmtNumber, no control flow
+
+Select BOOLEAN such that Affects(3, 3)
+FALSE
+5000
+2 - select boolean, affects stmtNumber stmtNumber, args type not assign
+
+Select BOOLEAN such that Affects(7, 9)
+FALSE
+5000
+3 - select boolean, affects stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects(16, 16)
+TRUE
+5000
+4 - select boolean, affects stmtNumber stmtNumber, 2nd args type not assign
+
+Select BOOLEAN such that Affects(16, 11)
+FALSE
+5000
+5 - select boolean, affects stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects(22, 27)
+FALSE
+5000
+6 - select boolean, affects stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects(34, 34)
+TRUE
+5000
+7 - select boolean, affects stmtNumber stmtNumber, modified in line 39
+
+Select BOOLEAN such that Affects(38, 38)
+FALSE
+5000
+8 - select boolean, affects stmtNumber stmtNumber, different variable
+
+Select BOOLEAN such that Affects(54, 54)
+FALSE
+5000
+9 - select boolean, affects stmtNumber stmtNumber, no control flow
+
+Select BOOLEAN such that Affects(59, 64)
+FALSE
+5000
+10 - select boolean, affects stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects(74, 74)
+TRUE
+5000
+11 - select boolean, affects stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects(86, 83)
+TRUE
+5000
+12 - select boolean, affects stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects(85, 86)
+TRUE
+5000
+13 - select boolean, affects stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects(85, 85)
+TRUE
+5000
+14 - select boolean, affects stmtNumber stmtNumber, different variable
+
+Select BOOLEAN such that Affects(86, 85)
+FALSE
+5000
+15 - select synonym, affects stmtNumber stmt
+stmt s;
+Select s such that Affects(83, s)
+none
+5000
+16 - select synonym, affects stmtNumber stmt
+stmt s;
+Select s such that Affects(85, s)
+85, 86
+5000
+17 - select synonym, affects stmtNumber stmt
+stmt s;
+Select s such that Affects(74, s)
+74
+5000
+18 - select synonym, affects stmtNumber progLine
+prog_line n;
+Select n such that Affects(64, n)
+SyntaxError
+5000
+19 - select synonym, affects stmtNumber progLine
+prog_line n;
+Select n such that Affects(70, n)
+SyntaxError
+5000
+20 - select synonym, affects assign stmtNumber
+assign a;
+Select a such that Affects(a, 64)
+none
+5000
+21 - select synonym, affects assign stmtNumber, modified by 39
+assign a;
+Select a such that Affects(a, 38)
+none
+5000
+22 - select synonym, affects assign stmtNumber
+assign a;
+Select a such that Affects(a, 34)
+34
+5000
+23 - select synonym, affects assign stmtNumber
+assign a;
+Select a such that Affects(a, 16)
+16
+5000
+24 - select synonym, affects assign stmtNumber
+assign a;
+Select a such that Affects(a, 3)
+none
+5000
+25 - select synonym, affects wildcard stmtNumber
+
+Select BOOLEAN such that Affects(_, 27)
+FALSE
+5000

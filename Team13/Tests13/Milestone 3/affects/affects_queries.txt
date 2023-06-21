@@ -1,0 +1,165 @@
+1-comment
+while w; if ifs; assign a; variable v; stmt s, s1; read r; print p; constant c;
+Select <s, s1> such that Affects(s, s1)
+100 101,100 110,100 112,101 100,103 103,103 94,104 106,104 109,104 96,104 97,104 98,106 103,106 86,106 94,109 112,109 113,109 116,109 117,109 118,109 84,110 106,110 108,110 109,110 113,110 118,110 84,110 89,110 96,110 97,110 98,113 115,113 118,115 118,116 118,117 118,18 17,84 110,84 112,86 103,86 104,86 87,87 103,87 86,87 94,89 100,91 92,92 100,92 107,92 109,92 118,92 91,94 96,94 97,97 98,98 105,109 120,112 120,115 120,119 120,17 120,81 119,121 124,122 129,124 130,125 126,128 127,131 134,131 136,132 135,134 137,138 141,144 146,150 152,155 156,157 160,162 166,170 171,175 177,179 181,185 183,188 189,193 192
+300000
+2-comment
+while w; if ifs; assign a; variable v; stmt s, s1; read r; print p; constant c;
+Select <s> such that Affects(s, _)
+100,101,103,104,106,109,110,112,113,115,116,117,119,17,18,81,84,86,87,89,91,92,94,97,98,121,122,124,125,128,131,132,134,138,144,150,155,157,162,170,175,179,185,188,193
+300000
+3-comment
+while w; if ifs; assign a; variable v; stmt s, s1; read r; print p; constant c;
+Select <s> such that Affects(_, s)
+100,101,103,104,105,106,107,108,109,110,112,113,115,116,117,118,119,120,17,84,86,87,89,91,92,94,96,97,98,124,126,127,129,130,134,135,136,137,141,146,152,156,160,166,171,177,181,183,189,192
+300000
+4-comment
+while w; if ifs; assign a; variable v; stmt s, s1; read r; print p; constant c;
+Select <s1> such that Affects(18, s1)
+17
+5000
+5-comment
+while w; if ifs; assign a; variable v; stmt s, s1; read r; print p; constant c;
+Select <s> such that Affects(s, 17)
+18
+5000
+6-comment
+while w; if ifs; assign a; variable v; stmt s, s1; read r; print p; constant c;
+Select <s> such that Affects(s, _)
+18,100,101,103,104,106,109,110,112,113,115,116,117,119,17,81,84,86,87,89,91,92,94,97,98,121,122,124,125,128,131,132,134,138,144,150,155,157,162,170,175,179,185,188,193
+300000
+7-comment
+while w; if ifs; assign a; variable v; stmt s, s1; read r; print p; constant c;
+Select BOOLEAN such that Affects(_, 17)
+TRUE
+300000
+8-comment
+while w; if ifs; assign a; variable v; stmt s, s1; read r; print p; constant c;
+Select s such that Affects(s, s)
+103
+5000
+9-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(121,a)
+124
+5000
+10-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(122,a)
+129
+5000
+11-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(124,a)
+130
+5000
+12-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(125,a)
+126
+5000
+13-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(128,a)
+127
+5000
+14-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(131,a)
+134, 136
+5000
+15-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(132,a)
+135
+5000
+16-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(134,a)
+137
+5000
+17-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(138,a)
+141
+5000
+18-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(144,a)
+146
+5000
+19-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(150,a)
+152
+5000
+20-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(155,a)
+156
+5000
+21-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(157,a)
+160
+5000
+22-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(162,a)
+166
+5000
+23-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(170,a)
+171
+5000
+24-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(175,a)
+177
+5000
+25-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(179,a)
+181
+5000
+26-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(185,a)
+183
+5000
+27-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(188,a)
+189
+5000
+28-comment
+while w, w1; if ifs, ifs1; assign a, a1,a2, a3; variable v, v1, v2; stmt s,s1,s2; read r; print p;
+Select a such that Affects(193,a)
+192
+5000
+29-comment
+while w; if ifs; assign a; variable v; stmt s, s1; read r; print p; constant c;
+Select <s, s1> such that Next*(s, s1) and Next*(s1, s) and Affects(s, s1) and Affects(s1,s)
+100 101,101 100,103 103,110 84,84 110,86 87,87 86,91 92,92 91
+300000
+30-comment
+while w; if ifs; assign a; variable v; stmt s, s1; read r; print p; constant c;
+Select <s> such that Affects(s, s)
+103
+300000
+31-comment
+while w; if ifs; assign a; variable v; stmt s, s1; read r; print p; constant c;
+Select <s, s1> such that Affects*(s, s1)
+100 100,100 101,100 103,100 104,100 105,100 106,100 108,100 109,100 110,100 112,100 113,100 115,100 116,100 117,100 118,100 120,100 84,100 86,100 87,100 89,100 94,100 96,100 97,100 98,101 100,101 101,101 103,101 104,101 105,101 106,101 108,101 109,101 110,101 112,101 113,101 115,101 116,101 117,101 118,101 120,101 84,101 86,101 87,101 89,101 94,101 96,101 97,101 98,103 103,103 105,103 94,103 96,103 97,103 98,104 100,104 101,104 103,104 104,104 105,104 106,104 108,104 109,104 110,104 112,104 113,104 115,104 116,104 117,104 118,104 120,104 84,104 86,104 87,104 89,104 94,104 96,104 97,104 98,106 100,106 101,106 103,106 104,106 105,106 106,106 108,106 109,106 110,106 112,106 113,106 115,106 116,106 117,106 118,106 120,106 84,106 86,106 87,106 89,106 94,106 96,106 97,106 98,109 100,109 101,109 103,109 104,109 105,109 106,109 108,109 109,109 110,109 112,109 113,109 115,109 116,109 117,109 118,109 120,109 84,109 86,109 87,109 89,109 94,109 96,109 97,109 98,110 100,110 101,110 103,110 104,110 105,110 106,110 108,110 109,110 110,110 112,110 113,110 115,110 116,110 117,110 118,110 120,110 84,110 86,110 87,110 89,110 94,110 96,110 97,110 98,112 120,113 115,113 118,113 120,115 118,115 120,116 118,117 118,119 120,121 124,121 130,122 129,124 130,125 126,128 127,131 134,131 136,131 137,132 135,134 137,138 141,144 146,150 152,155 156,157 160,162 166,17 120,170 171,175 177,179 181,18 120,18 17,185 183,188 189,193 192,81 119,81 120,84 100,84 101,84 103,84 104,84 105,84 106,84 108,84 109,84 110,84 112,84 113,84 115,84 116,84 117,84 118,84 120,84 84,84 86,84 87,84 89,84 94,84 96,84 97,84 98,86 100,86 101,86 103,86 104,86 105,86 106,86 108,86 109,86 110,86 112,86 113,86 115,86 116,86 117,86 118,86 120,86 84,86 86,86 87,86 89,86 94,86 96,86 97,86 98,87 100,87 101,87 103,87 104,87 105,87 106,87 108,87 109,87 110,87 112,87 113,87 115,87 116,87 117,87 118,87 120,87 84,87 86,87 87,87 89,87 94,87 96,87 97,87 98,89 100,89 101,89 103,89 104,89 105,89 106,89 108,89 109,89 110,89 112,89 113,89 115,89 116,89 117,89 118,89 120,89 84,89 86,89 87,89 89,89 94,89 96,89 97,89 98,91 100,91 101,91 103,91 104,91 105,91 106,91 107,91 108,91 109,91 110,91 112,91 113,91 115,91 116,91 117,91 118,91 120,91 84,91 86,91 87,91 89,91 91,91 92,91 94,91 96,91 97,91 98,92 100,92 101,92 103,92 104,92 105,92 106,92 107,92 108,92 109,92 110,92 112,92 113,92 115,92 116,92 117,92 118,92 120,92 84,92 86,92 87,92 89,92 91,92 92,92 94,92 96,92 97,92 98,94 105,94 96,94 97,94 98,97 105,97 98,98 105
+300000
+32-comment
+while w; if ifs; assign a; variable v; stmt s, s1; read r; print p; constant c;
+Select <s> such that Affects*(s, s)
+100, 101, 103, 104, 106, 109, 110, 84, 86, 87, 89, 91, 92
+300000
+33-comment
+while w; if ifs; assign a; variable v; stmt s, s1, s2; read r; print p; constant c;
+Select <s, s2> such that Affects*(s, s1) and Affects*(s1, s2)
+100 100,100 101,100 103,100 104,100 105,100 106,100 108,100 109,100 110,100 112,100 113,100 115,100 116,100 117,100 118,100 120,100 84,100 86,100 87,100 89,100 94,100 96,100 97,100 98,101 100,101 101,101 103,101 104,101 105,101 106,101 108,101 109,101 110,101 112,101 113,101 115,101 116,101 117,101 118,101 120,101 84,101 86,101 87,101 89,101 94,101 96,101 97,101 98,103 103,103 105,103 94,103 96,103 97,103 98,104 100,104 101,104 103,104 104,104 105,104 106,104 108,104 109,104 110,104 112,104 113,104 115,104 116,104 117,104 118,104 120,104 84,104 86,104 87,104 89,104 94,104 96,104 97,104 98,106 100,106 101,106 103,106 104,106 105,106 106,106 108,106 109,106 110,106 112,106 113,106 115,106 116,106 117,106 118,106 120,106 84,106 86,106 87,106 89,106 94,106 96,106 97,106 98,109 100,109 101,109 103,109 104,109 105,109 106,109 108,109 109,109 110,109 112,109 113,109 115,109 116,109 117,109 118,109 120,109 84,109 86,109 87,109 89,109 94,109 96,109 97,109 98,110 100,110 101,110 103,110 104,110 105,110 106,110 108,110 109,110 110,110 112,110 113,110 115,110 116,110 117,110 118,110 120,110 84,110 86,110 87,110 89,110 94,110 96,110 97,110 98,113 118,113 120,121 130,131 137,18 120,81 120,84 100,84 101,84 103,84 104,84 105,84 106,84 108,84 109,84 110,84 112,84 113,84 115,84 116,84 117,84 118,84 120,84 84,84 86,84 87,84 89,84 94,84 96,84 97,84 98,86 100,86 101,86 103,86 104,86 105,86 106,86 108,86 109,86 110,86 112,86 113,86 115,86 116,86 117,86 118,86 120,86 84,86 86,86 87,86 89,86 94,86 96,86 97,86 98,87 100,87 101,87 103,87 104,87 105,87 106,87 108,87 109,87 110,87 112,87 113,87 115,87 116,87 117,87 118,87 120,87 84,87 86,87 87,87 89,87 94,87 96,87 97,87 98,89 100,89 101,89 103,89 104,89 105,89 106,89 108,89 109,89 110,89 112,89 113,89 115,89 116,89 117,89 118,89 120,89 84,89 86,89 87,89 89,89 94,89 96,89 97,89 98,91 100,91 101,91 103,91 104,91 105,91 106,91 107,91 108,91 109,91 110,91 112,91 113,91 115,91 116,91 117,91 118,91 120,91 84,91 86,91 87,91 89,91 91,91 92,91 94,91 96,91 97,91 98,92 100,92 101,92 103,92 104,92 105,92 106,92 107,92 108,92 109,92 110,92 112,92 113,92 115,92 116,92 117,92 118,92 120,92 84,92 86,92 87,92 89,92 91,92 92,92 94,92 96,92 97,92 98,94 105,94 98,97 105
+300000

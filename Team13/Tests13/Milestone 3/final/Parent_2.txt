@@ -1,0 +1,175 @@
+1 - select synonym, parent wildcard wildcard
+stmt s;
+Select s such that Parent(_, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55
+5000
+2 - select synonym, parent wildcard synonym
+stmt s;
+Select s such that Parent(_, s)
+2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 46, 47, 48, 49, 50, 51, 52
+5000
+3 - select synonym, parent wildcard synonym
+stmt s1, s2;
+Select s2 such that Parent(_, s1)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55
+5000
+4 - select synonym, parent wildcard and undeclared synonym
+stmt s;
+Select s such that Parent(_, s1)
+SemanticError
+5000
+5 - select synonym, parent synonym wildcard
+stmt s;
+Select s such that Parent(s, _)
+1, 4, 9, 16, 21, 32, 35, 45, 46
+5000
+6 - select synonym, parent synonym wildcard
+stmt s1, s2;
+Select s2 such that Parent(s1, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55
+5000
+7 - select synonym, parent undeclared synonym and wildcard
+stmt s;
+Select s such that Parent(s3, _)
+SemanticError
+5000
+8 - select synonym, parent wildcard stmtNum
+stmt s;
+Select s such that Parent(_, 10)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55
+5000
+9 - select synonym, parent wildcard stmtNum
+stmt s;
+Select s such that Parent(_, 32)
+none
+5000
+10 - select synonym, parent wildcard and nonexistent stmtNum
+stmt s;
+Select s such that Parent(_, 56)
+none
+5000
+11 - select synonym, parent stmtNum wildcard
+stmt s;
+Select s such that Parent(55, _)
+none
+5000
+12 - select synonym, parent synonym stmtNum
+stmt s;
+Select s such that Parent(s, 36)
+35
+5000
+13 - select synonym, parent nonexistent stmtNum and wildcard
+stmt s;
+Select s such that Parent(45, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55
+5000
+14 - select synonym, parent synonym stmtNum
+stmt s;
+Select s such that Parent(55, s)
+none
+5000
+15 - select synonym, parent synonym stmtNum
+stmt s;
+Select s such that Parent(21, s)
+22, 23, 24, 25, 26, 27
+5000
+16 - select synonym, parent synonym stmtNum
+if ifs; 
+Select ifs such that Parent(ifs, 36)
+none
+5000
+17 - select synonym, parent synonym stmtNum
+while w; 
+Select w such that Parent(w, 8)
+none
+5000
+18 - select synonym, parent synonym stmtNum
+stmt s;
+Select s such that Parent(s, 19)
+16
+5000
+19 - select synonym, parent synonym stmtNum
+while w; 
+Select w such that Parent(w, 49)
+46
+5000
+20 - select synonym, parent synonym stmtNum
+stmt s;
+Select s such that Parent(s, 51)
+45
+5000
+21 - select synonym, parent undeclared synonym and stmtNum
+stmt s; 
+Select s such that Parent(s3, 38)
+SemanticError
+5000
+22 - select synonym, parent undeclared synonym and nonexistent stmtNum
+stmt s; 
+Select s such that Parent(s3, 60)
+SemanticError
+5000
+23 - select synonym, parent stmtNum synonym
+stmt s;
+Select s such that Parent(1, s)
+2, 3, 4
+5000
+24 - select synonym, parent stmtNum and undeclared synonym
+stmt s;
+Select s such that Parent(27, s3)
+SemanticError
+5000
+25 - select synonym, parent stmtNum stmtNum
+constant cons;
+Select cons such that Parent(32, 49)
+none
+5000
+26 - select synonym, parent stmtNum stmtNum
+constant cons;
+Select cons such that Parent(45, 50)
+0, 1, 2, 3, 4, 5
+5000
+27 - select synonym, parent stmtNum stmtNum
+if ifs;
+Select ifs such that Parent(1, 4)
+4, 9, 21, 32
+5000
+28 - select synonym, parent stmtNum and stmtNum
+stmt s;
+Select s such that Parent(33, 55)
+none
+5000
+29 - select synonym, parent nonexistent stmtNum and stmtNum
+stmt s; 
+Select s such that Parent(101, 51)
+none
+5000
+30 - select synonym, parent nonexistent stmtNum and nonexistent stmtNum
+stmt s; 
+Select s such that Parent(103, 88)
+none
+5000
+31 - select synonym, parent synonym synonym
+read re; if ifs;
+Select re such that Parent(ifs, re)
+39
+5000
+32 - select synonym, parent synonym synonym
+print pr; while w; 
+Select w such that Parent(w, pr)
+16, 35, 45, 46
+5000
+33 - select synonym, parent synonym synonym
+stmt s; call c;
+Select s such that Parent(s, c)
+4, 9, 21
+5000
+34 - select synonym, parent synonym and synonym
+while w; if ifs; 
+Select ifs such that Parent(w, ifs)
+4
+5000
+35 - select synonym, parent synonym and undeclared synonym
+stmt s;
+Select s such that Parent(s, s3)
+SemanticError
+5000

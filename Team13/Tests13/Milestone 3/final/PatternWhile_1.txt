@@ -1,0 +1,200 @@
+1 - select all while statement
+while w;
+Select w pattern w(_, _)
+11, 18, 31, 36, 41, 46, 50, 51, 66, 67, 68, 72, 73, 77, 79, 84
+5000
+2 - select all while statement
+while w; variable v;
+Select w pattern w(v, _)
+11, 18, 31, 36, 41, 46, 50, 51, 66, 67, 68, 72, 73, 77, 79, 84
+5000
+3 - pattern while
+while w;
+Select w pattern w("one", _)
+11
+5000
+4 - pattern while
+while w;
+Select w pattern w("1 + 1", _)
+SyntaxError
+5000
+5 - pattern while
+while w;
+Select w pattern w("two", _)
+11
+5000
+6 - pattern while
+while w;
+Select w pattern w("three", _)
+11
+5000
+7 - pattern while
+while w;
+Select w pattern w("word", _)
+18
+5000
+8 - pattern while
+while w;
+Select w pattern w("excel", _)
+18
+5000
+9 - pattern while
+while w;
+Select w pattern w("word > excel", _)
+SyntaxError
+5000
+10 - pattern while
+while w;
+Select w pattern w("green", _)
+31
+5000
+11 - pattern while
+while w;
+Select w pattern w("blue", _)
+36
+5000
+12 - pattern while
+while w;
+Select w pattern w("black", _)
+41
+5000
+13 - pattern while
+while w;
+Select w pattern w("while", _)
+41
+5000
+14 - pattern while
+while w;
+Select w pattern w("white", _)
+none
+5000
+15 - pattern while
+while w;
+Select w pattern w("lac", _)
+none
+5000
+16 - pattern while
+while w;
+Select w pattern w(_"lac"_, _)
+SyntaxError
+5000
+17 - pattern while
+while w;
+Select w pattern w("lightgrey", _)
+46
+5000
+18 - pattern while
+while w;
+Select w pattern w("grey", _)
+46
+5000
+19 - pattern while
+while w;
+Select w pattern w("grey + darkgrey", _)
+SyntaxError
+5000
+20 - pattern while
+while w;
+Select w pattern w("lightgrey > (grey + darkgrey)", _)
+SyntaxError
+5000
+21 - pattern while
+while w;
+Select w pattern w("circle", _)
+50
+5000
+22 - pattern while
+while w;
+Select w pattern w("square", _)
+50
+5000
+23 - pattern while
+while w;
+Select w pattern w("pentagon", _)
+51
+5000
+24 - pattern while
+while w;
+Select w pattern w("soap", _)
+none
+5000
+25 - pattern while
+while w;
+Select w pattern w("chicken", _)
+67
+5000
+26 - pattern while
+while w;
+Select w pattern w("chicken == chicken", _)
+SyntaxError
+5000
+27 - pattern while
+while w;
+Select w pattern w("chick", _)
+none
+5000
+28 - pattern while
+while w;
+Select w pattern w("pig", _)
+68
+5000
+29 - pattern while
+while w;
+Select w pattern w("dog", _)
+72, 73
+5000
+30 - pattern while
+while w;
+Select w pattern w("cat", _)
+72, 77
+5000
+31 - pattern while
+while w;
+Select w pattern w("pepsi", _)
+79, 84
+5000
+32 - pattern while
+while w;
+Select w pattern w("sprite", _)
+84
+5000
+33 - pattern while multiple spaces
+while w;
+Select w pattern w("    circle   " ,  _   )
+50
+5000
+34 - pattern while, invalid args
+while w;
+Select w pattern w("", _)
+SyntaxError
+5000
+35 - pattern while, invalid args
+while w;
+Select w pattern w(" ", _)
+SyntaxError
+5000
+36 - pattern while, invalid args
+while w;
+Select w pattern w(_""_, _)
+SyntaxError
+5000
+37 - pattern while, invalid args
+while w;
+Select w pattern w("+", _)
+SyntaxError
+5000
+38 - pattern while, invalid args
+while w;
+Select w pattern w("%", _)
+SyntaxError
+5000
+39 - pattern while, invalid args
+while w;
+Select w pattern w("(", _)
+SyntaxError
+5000
+40 - pattern while, invalid args
+while w;
+Select w pattern w(_, _, _)
+SyntaxError
+5000

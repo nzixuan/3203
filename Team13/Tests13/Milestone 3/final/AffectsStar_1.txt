@@ -1,0 +1,90 @@
+1 - select boolean, affectsStar stmtNumber stmtNumber, no control flow
+
+Select BOOLEAN such that Affects*(3, 3)
+FALSE
+5000
+2 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(16, 16)
+TRUE
+5000
+3 - select boolean, affectsStar stmtNumber stmtNumber, no common var
+
+Select BOOLEAN such that Affects*(22, 27)
+FALSE
+5000
+4 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(34, 34)
+TRUE
+5000
+5 - select boolean, affectsStar stmtNumber stmtNumber, modified by read
+
+Select BOOLEAN such that Affects*(38, 38)
+FALSE
+5000
+6 - select boolean, affectsStar stmtNumber stmtNumber, no common var
+
+Select BOOLEAN such that Affects*(42, 42)
+FALSE
+5000
+7 - select boolean, affectsStar stmtNumber stmtNumber, different proc
+
+Select BOOLEAN such that Affects*(38, 42)
+FALSE
+5000
+8 - select boolean, affectsStar stmtNumber stmtNumber, no common var
+
+Select BOOLEAN such that Affects*(54, 54)
+FALSE
+5000
+9 - select boolean, affectsStar stmtNumber stmtNumber, no CFG
+
+Select BOOLEAN such that Affects*(59, 64)
+FALSE
+5000
+10 - select boolean, affectsStar stmtNumber stmtNumber, no common var
+
+Select BOOLEAN such that Affects*(70, 70)
+FALSE
+5000
+11 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(74, 74)
+TRUE
+5000
+12 - select boolean, affectsStar stmtNumber stmtNumber, no common var
+
+Select BOOLEAN such that Affects*(83, 86)
+FALSE
+5000
+13 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(85, 85)
+TRUE
+5000
+14 - select boolean, affectsStar stmtNumber stmtNumber, no common var
+
+Select BOOLEAN such that Affects*(83, 85)
+FALSE
+5000
+15 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(85, 86)
+TRUE
+5000
+16 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(86, 83)
+TRUE
+5000
+17 - select synonym, affectsStar synonym synonym
+assign a, a1;
+Select a such that Affects*(a, a1)
+16, 34, 74, 85, 86
+5000
+18 - select synonym, affectsStar synonym synonym
+assign a, a1;
+Select a1 such that Affects*(a, a1)
+16, 34, 74, 86, 85, 83
+5000

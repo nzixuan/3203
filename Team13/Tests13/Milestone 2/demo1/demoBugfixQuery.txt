@@ -1,0 +1,15 @@
+1 - SemanticError
+assign a; variable v; constant c; 
+Select a such that Uses (a, c) pattern a (v,  _)
+SemanticError
+5000
+2 - Merge on pattern clause with no answer 
+assign a; variable v;
+Select v such that Modifies (a, "minus1") pattern a (_, "X")
+none
+5000
+3 - Merge on 2-syn constraint
+assign a; variable v;
+Select a such that Uses (a, v) pattern a (v, _)
+8, 9, 10, 12
+5000

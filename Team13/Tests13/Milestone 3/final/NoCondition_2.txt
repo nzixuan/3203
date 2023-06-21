@@ -1,0 +1,155 @@
+1 - select all procedure name
+procedure p;
+Select p
+cl455r00m, fru1t5, dr1nk5, on3l1n3
+5000
+2 - select all procedure name
+procedure p;
+Select p.procName
+cl455r00m, fru1t5, dr1nk5, on3l1n3
+5000
+3 - select all called procName
+call c;
+Select c.procName
+fru1t5, dr1nk5, on3l1n3
+5000
+4 - select all call statement
+call c;
+Select c
+5, 10, 15, 23, 30, 54
+5000
+5 - select all call statement
+call c;
+Select c.stmt#
+5, 10, 15, 23, 30, 54
+5000
+6 - select invalid attribute
+call c;
+Select c.value
+SemanticError
+5000
+7 - select invalid attribute
+call c;
+Select c.varName
+SemanticError
+5000
+8 - select all read statement
+read r;
+Select r
+2, 14, 37, 39, 47, 50
+5000
+9 - select all read statement
+read r;
+Select r.stmt#
+2, 14, 37, 39, 47, 50
+5000
+10 - select all read variable
+read r;
+Select r.varName
+b00k, m4ng0, w4t3r, c0ff33
+5000
+11 - select invalid attribute
+read r;
+Select r.value
+SemanticError
+5000
+12 - select all print statement
+print p;
+Select p
+6, 11, 20, 24, 26, 28, 34, 38, 40, 44, 48, 52
+5000
+13 - select all print statement
+print p;
+Select p.stmt#
+6, 11, 20, 24, 26, 28, 34, 38, 40, 44, 48, 52
+5000
+14 - select all invalid attribute
+print p;
+Select p.value
+SemanticError
+5000
+15 - select all printed variable
+print p;
+Select p.varName
+p3nc1l, b00k, appl3, b4n4n4, w4t3r, ju1c3, y0ghuRT
+5000
+16 - select invalid attribute
+print p;
+Select p.procName
+SemanticError
+5000
+17 - select all while statement
+while w;
+Select w
+1, 16, 35, 45, 46
+5000
+18 - select all while statement
+while w;
+Select w.stmt#
+1, 16, 35, 45, 46
+5000
+19 - select invalid attribute
+while w;
+Select w.varName
+SemanticError
+5000
+20 - select all if statement
+if ifs;
+Select ifs
+4, 9, 21, 32
+5000
+21 - select all if statement
+if ifs;
+Select ifs.stmt#
+4, 9, 21, 32
+5000
+22 - select invalid attribute
+if ifs;
+Select ifs.value
+SemanticError
+5000
+23 - select invalid attribute
+if ifs;
+Select ifs.varName
+SemanticError
+5000
+24 - select all assign statement
+assign a;
+Select a
+3, 7, 8, 12, 13, 17, 18, 19, 22, 25, 27, 29, 31, 33, 36, 41, 42, 43, 49, 51, 53, 55
+5000
+25 - select all assign statement
+assign a;
+Select a.stmt#
+3, 7, 8, 12, 13, 17, 18, 19, 22, 25, 27, 29, 31, 33, 36, 41, 42, 43, 49, 51, 53, 55
+5000
+26 - select invalid attribute
+assign a;
+Select a.varName
+SemanticError
+5000
+27 - select invalid attribute
+assign a;
+Select a.value
+SemanticError
+5000
+28 - select all constant value
+constant c;
+Select c
+0, 1, 2, 3, 4, 5
+5000
+29 - select all constant value
+constant c;
+Select c.value
+0, 1, 2, 3, 4, 5
+5000
+30 - select invalid attribute
+constant c;
+Select c.stmt#
+SemanticError
+5000
+31 - select all variable
+variable v;
+Select v
+b00k, p3nc1l, p3n, m4ng0, p34r, appl3, b4n4n4, w4t3r, t34, c0ff33, ju1c3, y0ghuRT, cl455r00m, fru1t5, dr1nk5
+5000

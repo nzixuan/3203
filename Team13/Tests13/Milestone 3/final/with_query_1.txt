@@ -1,0 +1,210 @@
+1 - select synonym, with procedure procName
+procedure p, q;
+Select p with p.procName = "whileOnly"
+whileOnly
+5000
+2 - select synonym, with procedure procName, different case
+procedure p, q;
+Select p with p.procName = "WhileOnly"
+none
+5000
+3 - select synonym, with procedure procName
+procedure p, q;
+Select p with q.procName = "ifInsideWhile"
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+4 - select synonym, with procedure procName
+procedure p, q;
+Select p with "ifInsideWhile" = q.procName
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+5 - select synonym, with nonsensical string
+procedure p, q;
+Select p with "ifInsideWhile" = "ifInsideWhile"
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+6 - select synonym, with procedure procName, nonsensical queries
+procedure p, q;
+Select p with q.procName = q.procName
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+7 - select synonym, with procedure procName, nonsensical queries
+procedure p, q;
+Select q with q.procName = q.procName
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+8 - select synonym, with procedure procName, nonsensical queries
+procedure p, q;
+Select q with p.procName = q.procName
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+9 - select synonym, with procedure procName, nonsensical queries
+procedure p, q;
+Select p with q.procName = hello
+SyntaxError
+5000
+10 - select synonym, with procedure procName equals variable
+procedure p, q; variable v;
+Select q with q.procName = v.varName
+none
+5000
+11 - select synonym, with procedure procName equals call procname
+procedure p, q; call c;
+Select p with p.procName = c.procName
+whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+12 - select synonym, with call procName equals procedure procname
+procedure p, q; call c;
+Select c.procName with c.procName = p.procName
+whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+13 - select synonym, with read varName
+read r;
+Select r with r.varName = "pepsi"
+81
+5000
+14 - select synonym, with read varName
+read r;
+Select r with r.varName = "cat"
+none
+5000
+15 - select synonym, with read varName
+read r;
+Select r with "shampoo" = r.varName
+58
+5000
+16 - select synonym, with read varName
+read r;
+Select r with "SHAMPOO" = r.varName
+none
+5000
+17 - select synonym, with read varName, nonsensical queries
+read r, r1;
+Select r with r.varName = r.varName
+5, 21, 39, 47, 53, 58, 71, 75, 81
+5000
+18 - select synonym, with read varName, nonsensical queries
+read r, r1;
+Select r with r.varName = r1.varName
+5, 21, 39, 47, 53, 58, 71, 75, 81
+5000
+19 - select synonym, with read varName, nonsensical queries
+read r, r1;
+Select r with "hello" = "hello"
+5, 21, 39, 47, 53, 58, 71, 75, 81
+5000
+20 - select synonym, with read varName, nonsensical queries
+read r, r1;
+Select r with 5 = 5
+5, 21, 39, 47, 53, 58, 71, 75, 81
+5000
+21 - select synonym, with read varName, select all read statements
+read r, r1;
+Select r with r1.varName = "pepsi"
+5, 21, 39, 47, 53, 58, 71, 75, 81
+5000
+22 - select synonym, with read varName, nonsensical queries
+read r, r1;
+Select r with "pepsi" = r1.varName
+5, 21, 39, 47, 53, 58, 71, 75, 81
+5000
+23 - select synonym, with print varName
+print p;
+Select p with p.varName = "dress"
+8
+5000
+24 - select synonym, with print varName
+print p;
+Select p with p.varName = "two"
+14
+5000
+25 - select synonym, with print varName
+print p;
+Select p with "two" = p.varName
+14
+5000
+26 - select synonym, with print varName
+print p;
+Select p with "white" = p.varName
+44
+5000
+27 - select synonym, with print varName, select all print statement
+print p, p1;
+Select p with p1.varName = p1.varName
+8, 14, 29, 32, 44, 60, 63, 78, 82
+5000
+28 - select synonym, with print varName, select all print statement
+print p, p1;
+Select p with p.varName = p1.varName
+8, 14, 29, 32, 44, 60, 63, 78, 82
+5000
+29 - select synonym, with print varName, select all print statement
+print p, p1;
+Select p with p1.varName = "cat"
+8, 14, 29, 32, 44, 60, 63, 78, 82
+5000
+30 - select synonym, with print varName
+print p, p1;
+Select p with p1.varName = "dog"
+none
+5000
+31 - select synonym, with print varName, select all print statement
+print p, p1;
+Select p with "hello" = "hello"
+8, 14, 29, 32, 44, 60, 63, 78, 82
+5000
+32 - select synonym, with print varName, select all print statement
+print p, p1;
+Select p with 2 = 2
+8, 14, 29, 32, 44, 60, 63, 78, 82
+5000
+33 - select synonym, with stmt stmtNumber
+stmt s;
+Select s with s.stmt# = 1
+1
+5000
+34 - select synonym, with stmt stmtNumber, invalid stmtNumber
+stmt s;
+Select s with s.stmt# = 0
+none
+5000
+35 - select synonym, with stmt stmtNumber equals read stmtNumber
+stmt s; read r;
+Select s with s.stmt# = r.stmt#
+5, 21, 39, 47, 53, 58, 71, 75, 81
+5000
+36 - select synonym, with stmt stmtNumber equals read stmtNumber
+stmt s; read r;
+Select r with s.stmt# = r.stmt#
+5, 21, 39, 47, 53, 58, 71, 75, 81
+5000
+37 - select synonym, with stmt stmtNumber equals print stmtNumber
+stmt s; print p;
+Select s with s.stmt# = p.stmt#
+8, 14, 29, 32, 44, 60, 63, 78, 82
+5000
+38 - select synonym, with stmt stmtNumber equals print stmtNumber
+stmt s; print p;
+Select p with s.stmt# = p.stmt#
+8, 14, 29, 32, 44, 60, 63, 78, 82
+5000
+39 - select synonym, with read stmtNumber equals print stmtNumber
+read r; print p;
+Select r with r.stmt# = p.stmt#
+none
+5000
+40 - select synonym, with call stmtNumber
+call c;
+Select c with c.stmt# = 23
+23
+5000
+41 - select synonym, with call stmtNumber
+call c;
+Select c with c.stmt# = 22
+none
+5000
+42 - select synonym, with call stmtNumber, select all call statement
+call c, c1;
+Select c1 with c.stmt# = 23
+2, 4, 6, 7, 9, 10, 12, 13, 15, 17, 20, 23, 24, 25, 26, 28, 33, 35, 37, 40, 43, 45, 48, 49, 52, 55, 62, 65, 69, 76
+5000

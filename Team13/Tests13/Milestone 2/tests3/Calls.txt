@@ -1,0 +1,75 @@
+1 - select synonym, calls wildcard wildcard
+procedure p, q;
+Select p such that Calls(_, _)
+cl455r00m, fru1t5, dr1nk5, on3l1n3
+5000
+2 - select synonym, calls synonym wildcard
+procedure p, q;
+Select p such that Calls(p, _)
+cl455r00m, fru1t5, dr1nk5
+5000
+3 - select synonym, calls wildcard synonym
+procedure p, q;
+Select p such that Calls(_, p)
+fru1t5, dr1nk5, on3l1n3
+5000
+4 - select boolean, calls procName procName
+
+Select BOOLEAN such that Calls("cl455r00m", "on3l1n3")
+FALSE
+5000
+5 - select boolean, calls procName procName
+
+Select BOOLEAN such that Calls("cl455r00m", "fru1t5")
+TRUE
+5000
+6 - select boolean, calls procName procName
+
+Select BOOLEAN such that Calls("fru1t5", "dr1nk5")
+TRUE
+5000
+7 - select boolean, calls procName procName
+
+Select BOOLEAN such that Calls("dr1nk5", "on3l1n3")
+TRUE
+5000
+8 - select boolean, calls procName procName
+
+Select BOOLEAN such that Calls("on3l1n3", "fru1t5")
+FALSE
+5000
+9 - select synonym, calls synonym procName
+procedure p;
+Select p such that Calls(p, "fru1t5")
+cl455r00m
+5000
+10 - select synonym, calls synonym procName
+procedure p;
+Select p such that Calls(p, "on3l1n3")
+dr1nk5
+5000
+11 - select synonym, calls procName synonym
+procedure p;
+Select p such that Calls("on3l1n3", p)
+none
+5000
+12 - select synonym, calls procName synonym
+procedure p;
+Select p such that Calls("cl455r00m", p)
+fru1t5
+5000
+13 - select synonym, calls procName synonym
+procedure p;
+Select p such that Calls("fru1t5", p)
+dr1nk5
+5000
+14 - select synonym, calls procName synonym
+procedure p, q;
+Select p such that Calls(p, q)
+cl455r00m, fru1t5, dr1nk5
+5000
+15 - select synonym, calls procName synonym
+procedure p, q;
+Select q such that Calls(p, q)
+fru1t5, dr1nk5, on3l1n3
+5000

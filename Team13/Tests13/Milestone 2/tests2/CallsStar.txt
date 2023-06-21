@@ -1,0 +1,255 @@
+1 - select synonym, callsStar wildcard wildcard
+procedure p, q;
+Select p such that Calls*(_, _)
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+2 - select synonym, callsStar wildcard synonym
+procedure p, q;
+Select p such that Calls*(_, p)
+whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+3 - select synonym, callsStar wildcard synonym
+procedure p, q;
+Select p such that Calls*(_, q)
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+4 - select synonym, callsStar wildcard and undeclared synonym
+procedure p, q;
+Select p such that Calls*(_, pq)
+SemanticError
+5000
+5 - select undeclared synonym, callsStar wildcard and synonym
+procedure p, q;
+Select pq such that Calls*(_, p)
+SemanticError
+5000
+6 - select synonym, callsStar synonym wildcard
+procedure p, q;
+Select p such that Calls*(p, _)
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile
+5000
+7 - select synonym, callsStar synonym wildcard
+procedure p, q;
+Select p such that Calls*(q, _)
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+8 - select synonym, callsStar undeclared synonym and wildcard
+procedure p, q;
+Select p such that Calls*(pq, _)
+SemanticError
+5000
+9 - select undeclared synonym, callsStar synonym and wildcard
+procedure p, q;
+Select pq such that Calls*(p, _)
+SemanticError
+5000
+10 - select synonym, callsStar wildcard procName
+procedure p, q;
+Select p such that Calls*(_, "ifOnly")
+none
+5000
+11 - select synonym, callsStar wildcard procName
+procedure p, q;
+Select p such that Calls*(_, "whileInsideWhile")
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+12 - select synonym, callsStar wildcard procName
+procedure p, q;
+Select p such that Calls*(_, "ifAndWhileInsideWhile")
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+13 - select synonym, callsStar wildcard and nonexistent procName
+procedure p, q;
+Select p such that Calls*(_, "asdf")
+none
+5000
+14 - select synonym, callsStar procName wildcard
+procedure p, q;
+Select p such that Calls*("ifOnly", _)
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+15 - select synonym, callsStar procName wildcard
+procedure p, q;
+Select p such that Calls*("whileInsideWhileInsideWhile", _)
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+16 - select synonym, callsStar procName wildcard
+procedure p, q;
+Select p such that Calls*("ifAndWhileInsideWhile", _)
+none
+5000
+17 - select synonym, callsStar invalid procName wildcard
+procedure p, q;
+Select p such that Calls*("123hello", _)
+SyntaxError
+5000
+18 - select synonym, callsStar synonym procName
+procedure p, q;
+Select p such that Calls*(p, "whileInsideIf")
+ifOnly, whileOnly, ifInsideWhile
+5000
+19 - select synonym, callsStar synonym procName
+procedure p, q;
+Select p such that Calls*(p, "ifOnly")
+none
+5000
+20 - select synonym, callsStar synonym procName
+procedure p, q;
+Select p such that Calls*(p, "ifInsideIf")
+doubleWhile, ifInsideWhile, ifOnly, whileOnly, whileInsideIf
+5000
+21 - select synonym, callsStar synonym procName
+procedure p, q;
+Select p such that Calls*(p, "ifAndWhileInsideWhile")
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile
+5000
+22 - select synonym, callsStar synonym procName
+procedure p, q;
+Select q such that Calls*(p, "ifOnly")
+none
+5000
+23 - select synonym, callsStar procName synonym
+procedure p, q;
+Select p such that Calls*("ifOnly", p)
+whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+24 - select synonym, callsStar procName synonym
+procedure p, q;
+Select p such that Calls*(p, "whileInsideWhileInsideWhile")
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf
+5000
+25 - select synonym, callsStar procName synonym
+procedure p, q;
+Select q such that Calls*("ifAndWhileInsideWhile", p)
+none
+5000
+26 - select synonym, callsStar synonym procName
+procedure p, q;
+Select q such that Calls*("whileInsideWhile", p)
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+27 - select BOOLEAN, callsStar procName procName
+
+Select BOOLEAN such that Calls*("ifOnly", "whileInsideIf")
+TRUE
+5000
+28 - select BOOLEAN, callsStar procName procName
+
+Select BOOLEAN such that Calls*("whileInsideIf", "doubleWhile")
+TRUE
+5000
+29 - select BOOLEAN, callsStar procName procName
+
+Select BOOLEAN such that Calls*("ifInsideWhile", "whileInsideWhile")
+TRUE
+5000
+30 - select BOOLEAN, callsStar procName procName
+
+Select BOOLEAN such that Calls*("whileInsideWhileInsideWhile", "doubleWhileInsideWhile")
+TRUE
+5000
+31 - select BOOLEAN, callsStar procName procName
+
+Select BOOLEAN such that Calls*("ifInsideIf", "whileInsideWhile")
+TRUE
+5000
+32 - select BOOLEAN, callsStar procName procName
+
+Select BOOLEAN such that Calls*("ifOnly", "whileInsideWhile")
+TRUE
+5000
+33 - select BOOLEAN, callsStar procName procName
+
+Select BOOLEAN such that Calls*("whileInsideIf", "ifOnly")
+FALSE
+5000
+34 - select BOOLEAN, callsStar procName procName
+
+Select BOOLEAN such that Calls*("doubleWhileInsideWhile", "ifInsideWhile")
+FALSE
+5000
+35 - select BOOLEAN, callsStar procName procName
+
+Select BOOLEAN such that Calls*("ifAndWhileInsideWhile", "ifInsideWhile")
+FALSE
+5000
+36 - select BOOLEAN, callsStar procName procName
+
+Select BOOLEAN such that Calls*("doubleWhile", "whileOnly")
+FALSE
+5000
+37 - select synonym, callsStar synonym synonym
+procedure p, q;
+Select p such that Calls*(p, q)
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile
+5000
+38 - select synonym, callsStar synonym synonym
+procedure p, q;
+Select q such that Calls*(p, q)
+whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+39 - select undeclared synonym, callsStar synonym synonym
+procedure p, q;
+Select pq such that Calls*(p, q)
+SemanticError
+5000
+40 - select synonym, callsStar synonym synonym
+procedure p, q, r;
+Select r such that Calls*(p, q)
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+41 - select undeclared synonym
+procedure p, q;
+Select a such that Calls*(p, q)
+SemanticError
+5000
+42 - select synonym, invalid calls argument
+procedure p, q;
+Select p such that Calls*(_, _, _)
+SyntaxError
+5000
+43 - select synonym, invalid calls argument
+assign a; procedure p, q;
+Select a such that Calls*(a, _)
+SemanticError
+5000
+44 - select BOOLEAN, invalid calls argument
+procedure p, q;
+Select BOOLEAN such that Calls*(_, _, _)
+SyntaxError
+5000
+45 - select synonym, calls wildcard wildcard
+assign a; procedure p;
+Select BOOLEAN such that Calls*(a, p)
+SemanticError
+5000
+46 - select synonym, callsStar procName synonym
+procedure p, q;
+Select p such that Calls*("whileOnly", p)
+whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+47 - select synonym, callsStar procName synonym
+procedure p, q;
+Select p such that Calls*("doubleWhile", p)
+whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+48 - select synonym, callsStar procName synonym
+procedure p, q;
+Select p such that Calls*("whileInsideIf", p)
+doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile, doubleWhileInsideWhile, ifAndWhileInsideWhile
+5000
+49 - select synonym, callsStar synonym procName
+procedure p, q;
+Select p such that Calls*(p, "ifInsideIf")
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile
+5000
+50 - select synonym, callsStar synonym procName
+procedure p, q;
+Select p such that Calls*(p, "whileInsideWhile")
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, ifInsideIf
+5000
+51 - select synonym, callsStar synonym procName
+procedure p, q;
+Select p such that Calls*(p, "doubleWhileInsideWhile")
+ifOnly, whileOnly, ifInsideWhile, whileInsideIf, doubleWhile, whileInsideWhile, ifInsideIf, whileInsideWhileInsideWhile
+5000

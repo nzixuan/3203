@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\PKB">
+      <UniqueIdentifier>{07d5e51f-3488-40c5-9c90-6575f191f3f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SP">
+      <UniqueIdentifier>{93903371-5a91-4e44-beff-36f1409dacfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SP">
+      <UniqueIdentifier>{364ef211-2015-4010-810a-5962d55ce7e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB">
+      <UniqueIdentifier>{fa6af97c-5f6f-4fba-b7e3-a9e541e58a02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QPS">
+      <UniqueIdentifier>{a3654a24-8ab3-4c93-848f-9c1552eead21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tokenizer">
+      <UniqueIdentifier>{6f935518-824e-4eb9-9d6b-c128f07f7ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tokenizer">
+      <UniqueIdentifier>{b6290d4a-b154-439d-b592-4bb2d999d85e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QPS\Query">
+      <UniqueIdentifier>{7727c0d8-cab3-4bd7-930c-7fc41bdb4bc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QPS\Parser">
+      <UniqueIdentifier>{0712b047-c9a0-4e1a-9ccc-f379cbdf0b90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QPS\Evaluator">
+      <UniqueIdentifier>{5d32b40d-814e-4622-98a8-6024a718e97c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QPS\Validation">
+      <UniqueIdentifier>{49dc1521-9526-44be-9258-c4a3e7c50969}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\common">
+      <UniqueIdentifier>{cfeaa1de-f30a-47c6-9a47-095c9cca0964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PKB\PatternStorage">
+      <UniqueIdentifier>{43fb8d3e-842b-4071-8d9a-f55bba4abef3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\PatternStorage">
+      <UniqueIdentifier>{2feec6a4-61fd-4145-ad17-e6b224870776}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QPS\utility">
+      <UniqueIdentifier>{a5c5bd10-ee77-4375-afe3-6801030590c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PKB\CFGStorage">
+      <UniqueIdentifier>{05b7cc79-0a53-4c07-bc54-1fbe6bbfc709}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\CFGStorage">
+      <UniqueIdentifier>{4a4e8aaa-4de8-4930-a241-a05ba1830b9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PKB\SuchThatQueriable">
+      <UniqueIdentifier>{c8beb40e-fc2c-440b-ad7c-b3dc49e2e4ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PKB\SuchThatQueriable\SuchThatQuerier">
+      <UniqueIdentifier>{87c75c84-70c6-48f5-b938-d253d0a243c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PKB\SuchThatQueriable\SuchThatStorage">
+      <UniqueIdentifier>{0934f0d7-67da-414e-9a4a-7194be863ad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\SuchThatQueriable">
+      <UniqueIdentifier>{71109411-a10a-4d1e-8b0f-c88145da456a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\SuchThatQueriable\SuchThatQuerier">
+      <UniqueIdentifier>{ae0602ef-ad86-478c-9a9a-5aeabd5becf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\SuchThatQueriable\SuchThatStorage">
+      <UniqueIdentifier>{f383b2bc-da21-4644-8c48-ec2fd0350d39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QPS\Parser\Extraction">
+      <UniqueIdentifier>{caa309c9-3e20-43db-8cd8-32365e6a6510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QPS\Query\Clauses">
+      <UniqueIdentifier>{e368c04a-415a-4104-927d-bbb7781203ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QPS\Query\Clauses\RelArgs">
+      <UniqueIdentifier>{7ac18cbe-41e7-4d6e-bb2d-77ad6ed5effa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QPS\Optimiser">
+      <UniqueIdentifier>{fe071b59-69d2-458e-9cd0-1b9162f18300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{0a29cfe7-63ab-42cd-87ab-7a732cc3a618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\QPS">
+      <UniqueIdentifier>{e3deedf0-7d08-405e-b96e-147e9305191d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\QPS\Query">
+      <UniqueIdentifier>{bb0f5bef-83ce-470e-8bc1-6e4965c46396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\QPS\Query\Clauses">
+      <UniqueIdentifier>{6b771ee3-4dac-4e7f-a506-d34ce0f9b806}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\QPS\Query\Clauses\RelArgs">
+      <UniqueIdentifier>{6f831cc8-1c9c-4683-8827-789d197bef34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\QPS\Parser">
+      <UniqueIdentifier>{66ca9614-0b65-49e0-8a40-482f6e3bd947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\QPS\Parser\Extraction">
+      <UniqueIdentifier>{d53fb3df-c15c-4505-a523-752a4a62c8cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\QPS\Evaluator">
+      <UniqueIdentifier>{9473b77d-caa8-4b8d-b628-417886915b6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\QPS\Validation">
+      <UniqueIdentifier>{fb1954f4-8562-4440-b83c-93b1f3a309e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\QPS\utility">
+      <UniqueIdentifier>{f6d14936-9a91-4a64-952e-d7eb278b69f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB\QPS\Optimiser">
+      <UniqueIdentifier>{09435db9-9a3f-45c6-a300-f32c66da63e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\PKB.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SPA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Tokenizer.cpp">
+      <Filter>Source Files\Tokenizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\AST.cpp">
+      <Filter>Source Files\SP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\ASTParser.cpp">
+      <Filter>Source Files\SP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\DesignExtractorVisitor.cpp">
+      <Filter>Source Files\SP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\DesignExtractor.cpp">
+      <Filter>Source Files\SP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Query.cpp">
+      <Filter>Source Files\PKB\QPS\Query</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\QueryParser.cpp">
+      <Filter>Source Files\PKB\QPS\Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\QueryEvaluator.cpp">
+      <Filter>Source Files\PKB\QPS\Evaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\QueryValidator.cpp">
+      <Filter>Source Files\PKB\QPS\Validation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SuchThatStorage.cpp">
+      <Filter>Source Files\PKB\SuchThatQueriable\SuchThatStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\FollowsTStorage.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\ParentTStorage.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\PatternStorage.cpp">
+      <Filter>Source Files\PKB\PatternStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\CFG.cpp">
+      <Filter>Source Files\SP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Table.cpp">
+      <Filter>Source Files\PKB\QPS\Evaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\PQLList.cpp">
+      <Filter>Source Files\PKB\QPS\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\PQLExcept.cpp">
+      <Filter>Source Files\PKB\QPS\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\CFG.cpp">
+      <Filter>Source Files\SP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\CFGStorage.cpp">
+      <Filter>Source Files\PKB\CFGStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\CFGVisitor.cpp">
+      <Filter>Source Files\SP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\AndExtractor.cpp">
+      <Filter>Source Files\PKB\QPS\Parser\Extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\DeclarationExtractor.cpp">
+      <Filter>Source Files\PKB\QPS\Parser\Extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\PatternExtractor.cpp">
+      <Filter>Source Files\PKB\QPS\Parser\Extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\RelArgsExtractor.cpp">
+      <Filter>Source Files\PKB\QPS\Parser\Extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SelectClauseExtractor.cpp">
+      <Filter>Source Files\PKB\QPS\Parser\Extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SuchThatExtractor.cpp">
+      <Filter>Source Files\PKB\QPS\Parser\Extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\WithExtractor.cpp">
+      <Filter>Source Files\PKB\QPS\Parser\Extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\QueryExtractor.cpp">
+      <Filter>Source Files\PKB\QPS\Parser\Extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\PQLUtil.cpp">
+      <Filter>Source Files\PKB\QPS\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\PatternEvaluator.cpp">
+      <Filter>Source Files\PKB\QPS\Evaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SuchThatEvaluator.cpp">
+      <Filter>Source Files\PKB\QPS\Evaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\CtrlVarStorage.cpp">
+      <Filter>Source Files\PKB\PatternStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\AffectsQuerier.cpp">
+      <Filter>Source Files\PKB\SuchThatQueriable\SuchThatQuerier</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\PKBEntity.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Clause.cpp">
+      <Filter>Source Files\PKB\QPS\Query\Clauses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Pattern.cpp">
+      <Filter>Source Files\PKB\QPS\Query\Clauses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SuchThat.cpp">
+      <Filter>Source Files\PKB\QPS\Query\Clauses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\ClauseManager.cpp">
+      <Filter>Source Files\PKB\QPS\Query\Clauses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Group.cpp">
+      <Filter>Source Files\PKB\QPS\Query\Clauses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\AttrRef.cpp">
+      <Filter>Source Files\PKB\QPS\Query\Clauses\RelArgs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Number.cpp">
+      <Filter>Source Files\PKB\QPS\Query\Clauses\RelArgs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SourceArg.cpp">
+      <Filter>Source Files\PKB\QPS\Query\Clauses\RelArgs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Synonym.cpp">
+      <Filter>Source Files\PKB\QPS\Query\Clauses\RelArgs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Wildcard.cpp">
+      <Filter>Source Files\PKB\QPS\Query\Clauses\RelArgs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\RelArg.cpp">
+      <Filter>Source Files\PKB\QPS\Query\Clauses\RelArgs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SuchThatTQuerier.cpp">
+      <Filter>Source Files\PKB\SuchThatQueriable\SuchThatQuerier</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\With.cpp">
+      <Filter>Source Files\PKB\QPS\Query\Clauses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\QueryOptimiser.cpp">
+      <Filter>Source Files\PKB\QPS\Optimiser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\ClauseNode.cpp">
+      <Filter>Source Files\PKB\QPS\Optimiser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Node.cpp">
+      <Filter>Source Files\PKB\QPS\Optimiser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SynNode.cpp">
+      <Filter>Source Files\PKB\QPS\Optimiser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\common.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SuchThatQuerier.cpp">
+      <Filter>Source Files\PKB\SuchThatQueriable\SuchThatQuerier</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\CFGParser.cpp">
+      <Filter>Source Files\SP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\WithEvaluator.cpp">
+      <Filter>Source Files\PKB\QPS\Evaluator</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\source\PKB.h">
+      <Filter>Header Files\PKB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SPA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Tokenizer.h">
+      <Filter>Header Files\Tokenizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Token.h">
+      <Filter>Header Files\Tokenizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\AST.h">
+      <Filter>Header Files\SP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SimpleParser.h">
+      <Filter>Header Files\SP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\DesignExtractorVisitor.h">
+      <Filter>Header Files\SP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\DesignExtractor.h">
+      <Filter>Header Files\SP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Query.h">
+      <Filter>Header Files\QPS\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\QueryParser.h">
+      <Filter>Header Files\QPS\Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\QueryValidator.h">
+      <Filter>Header Files\QPS\Validation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\PKBEntity.h">
+      <Filter>Header Files\PKB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\FollowsStorage.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SuchThatStorage.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\UsesStorage.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\ModifiesStorage.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\ParentStorage.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\common.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\PatternStorage.h">
+      <Filter>Header Files\PKB\PatternStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\AssignStorage.h">
+      <Filter>Header Files\PKB\PatternStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\CFG.h">
+      <Filter>Header Files\SP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Table.h">
+      <Filter>Header Files\QPS\Evaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\CallsStorage.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\CallsTStorage.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\NextStorage.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\PQLList.h">
+      <Filter>Header Files\QPS\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\PQLExcept.h">
+      <Filter>Header Files\QPS\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\CFG.h">
+      <Filter>Header Files\SP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\CFGStorage.h">
+      <Filter>Header Files\PKB\CFGStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\NextTQuerier.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatQuerier</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SuchThatQueriable.h">
+      <Filter>Header Files\PKB\SuchThatQueriable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\PQLUtil.h">
+      <Filter>Header Files\QPS\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\CFGVisitor.h">
+      <Filter>Header Files\SP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\PQLToken.h">
+      <Filter>Header Files\QPS\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\PQLGrammar.h">
+      <Filter>Header Files\QPS\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\DeclarationExtractor.h">
+      <Filter>Header Files\QPS\Parser\Extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SelectClauseExtractor.h">
+      <Filter>Header Files\QPS\Parser\Extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SuchThatExtractor.h">
+      <Filter>Header Files\QPS\Parser\Extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\PatternExtractor.h">
+      <Filter>Header Files\QPS\Parser\Extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\WithExtractor.h">
+      <Filter>Header Files\QPS\Parser\Extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\AndExtractor.h">
+      <Filter>Header Files\QPS\Parser\Extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\RelArgsExtractor.h">
+      <Filter>Header Files\QPS\Parser\Extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\QueryExtractor.h">
+      <Filter>Header Files\QPS\Parser\Extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\CtrlVarStorage.h">
+      <Filter>Header Files\PKB\PatternStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\AssignStorage.h">
+      <Filter>Header Files\PKB\PatternStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\IfStorage.h">
+      <Filter>Header Files\PKB\PatternStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\WhileStorage.h">
+      <Filter>Header Files\PKB\PatternStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\QueryEvaluator.h">
+      <Filter>Header Files\QPS\Evaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\PatternEvaluator.h">
+      <Filter>Header Files\QPS\Evaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SuchThatEvaluator.h">
+      <Filter>Header Files\QPS\Evaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Clause.h">
+      <Filter>Header Files\QPS\Query\Clauses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Pattern.h">
+      <Filter>Header Files\QPS\Query\Clauses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SuchThat.h">
+      <Filter>Header Files\QPS\Query\Clauses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\ClauseManager.h">
+      <Filter>Header Files\QPS\Query\Clauses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Group.h">
+      <Filter>Header Files\QPS\Query\Clauses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Synonym.h">
+      <Filter>Header Files\QPS\Query\Clauses\RelArgs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Wildcard.h">
+      <Filter>Header Files\QPS\Query\Clauses\RelArgs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SourceArg.h">
+      <Filter>Header Files\QPS\Query\Clauses\RelArgs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Number.h">
+      <Filter>Header Files\QPS\Query\Clauses\RelArgs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\AttrRef.h">
+      <Filter>Header Files\QPS\Query\Clauses\RelArgs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\RelArg.h">
+      <Filter>Header Files\QPS\Query\Clauses\RelArgs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SuchThatTQuerier.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatQuerier</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\AffectsTQuerier.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatQuerier</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\AffectsQuerier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\With.h">
+      <Filter>Header Files\QPS\Query\Clauses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\AffectsQuerier.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatQuerier</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\QueryOptimiser.h">
+      <Filter>Header Files\QPS\Optimiser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Node.h">
+      <Filter>Header Files\QPS\Optimiser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SynNode.h">
+      <Filter>Header Files\QPS\Optimiser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\ClauseNode.h">
+      <Filter>Header Files\QPS\Optimiser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\SuchThatQuerier.h">
+      <Filter>Header Files\PKB\SuchThatQueriable\SuchThatQuerier</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\WithEvaluator.h">
+      <Filter>Header Files\QPS\Evaluator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+</Project>

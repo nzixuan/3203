@@ -1,0 +1,105 @@
+1 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(3, 3)
+TRUE
+5000
+2 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(3, 7)
+TRUE
+5000
+3 - select boolean, affectsStar stmtNumber stmtNumber, b00k modified by stmt 2
+
+Select BOOLEAN such that Affects*(8, 8)
+FALSE
+5000
+4 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(8, 12)
+TRUE
+5000
+5 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(3, 13)
+TRUE
+5000
+6 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(17, 17)
+TRUE
+5000
+7 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(18, 18)
+TRUE
+5000
+8 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(19, 19)
+TRUE
+5000
+9 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(18, 22)
+TRUE
+5000
+10 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(17, 25)
+TRUE
+5000
+11 - select boolean, affectsStar stmtNumber stmtNumber, pear uses banana and mango uses banana
+
+Select BOOLEAN such that Affects*(17, 29)
+TRUE
+5000
+12 - select boolean, affectsStar stmtNumber stmtNumber, modified in 47
+
+Select BOOLEAN such that Affects*(49, 49)
+FALSE
+5000
+13 - select boolean, affectsStar stmtNumber stmtNumber
+
+Select BOOLEAN such that Affects*(51, 51)
+TRUE
+5000
+14 - select boolean, affectsStar stmtNumber stmtNumber, no control flow
+
+Select BOOLEAN such that Affects*(53, 53)
+FALSE
+5000
+15 - select boolean, affectsStar stmtNumber stmtNumber, no control flow
+
+Select BOOLEAN such that Affects*(33, 41)
+FALSE
+5000
+16 - select boolean, affectsStar stmtNumber stmtNumber, no control flow
+
+Select BOOLEAN such that Affects*(55, 1)
+FALSE
+5000
+17 - select synonym, affectsStar stmtNumber synonym
+assign a;
+Select a such that Affects*(3, a)
+3, 7, 13
+5000
+18 - select synonym, affectsStar stmtNumber synonym
+assign a;
+Select a such that Affects*(8, a)
+12
+5000
+19 - select synonym, affectsStar stmtNumber synonym
+assign a;
+Select a such that Affects*(17, a)
+17, 25, 27, 29
+5000
+20 - select synonym, affectsStar stmtNumber synonym
+assign a;
+Select a such that Affects*(18, a)
+29, 22, 18
+5000
+21 - select synonym, affectsStar synonym stmtNumber
+assign a;
+Select a such that Affects*(a, 29)
+27, 25, 22, 17, 18
+5000

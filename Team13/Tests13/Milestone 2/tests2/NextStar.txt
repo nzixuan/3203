@@ -1,0 +1,155 @@
+1 - select synonym, next wildcard wildcard
+stmt s1, s2;
+Select s1 such that Next*(_, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86 
+5000
+2 - select synonym, next wildcard synonym
+stmt s1, s2;
+Select s1 such that Next*(_, s1)
+2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86 
+5000
+3 - select synonym, next wildcard synonym
+stmt s1, s2;
+Select s1 such that Next*(s1, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 61, 62, 63, 64, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86 
+5000
+4 - select synonym, next synonym stmtNum for If with follower
+stmt s1;
+Select s1 such that Next*(1, s1)
+2, 3, 4, 5, 6, 7, 8, 9, 10
+5000
+5 - select synonym, next synonym stmtNum for while without follower
+stmt s1;
+Select s1 such that Next*(11, s1)
+11, 12, 13, 14, 15, 16, 17
+5000
+6 - select synonym, next synonym stmtNum for while without follower
+stmt s1;
+Select s1 such that Next*(17, s1)
+11, 12, 13, 14, 15, 16, 17
+5000
+7 - select synonym, next synonym stmtNum for if with while parent
+stmt s1;
+Select s1 such that Next*(23, s1)
+18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+5000
+8 - select synonym, next synonym stmtNum for if with while parent
+stmt s1;
+Select s1 such that Next*(24, s1)
+18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+5000
+9 - select synonym, next synonym stmtNum for while with if parent
+stmt s1;
+Select s1 such that Next*(31, s1)
+31, 32, 33, 34, 35
+5000
+10 - select synonym, next synonym stmtNum for while with while parent
+stmt s1;
+Select s1 such that Next*(54, s1)
+50, 51, 52, 53, 54, 55
+5000
+11 - select synonym, next synonym stmtNum for if with if parent
+stmt s1;
+Select s1 such that Next*(56, s1)
+57, 58, 59, 60, 61, 62, 63, 64, 65
+5000
+12 - select synonym, next synonym stmtNum for if with if parent
+stmt s1;
+Select s1 such that Next*(57, s1)
+58, 59, 60
+5000
+13 - select synonym, next synonym stmtNum for 3 nested loop
+stmt s1;
+Select s1 such that Next*(67, s1)
+66, 67, 68, 69, 70, 71
+5000
+14 - select synonym, next synonym stmtNum for else with else parent
+stmt s1;
+Select s1 such that Next*(s1, 65)
+56, 61, 62, 63, 64
+5000
+15 - select synonym, next synonym stmtNum for else with else parent
+stmt s1;
+Select s1 such that Next*(s1, 63)
+56, 61
+5000
+16 - select synonym, next synonym stmtNum
+assign a;
+Select a such that Next*(a, 28)
+22, 27
+5000
+17 - select synonym, next synonym stmtNum
+print pr;
+Select pr such that Next*(57,pr)
+60
+5000
+18 - select synonym, next synonym stmtNum
+if ifs;
+Select ifs such that Next*(ifs, 79)
+80
+5000
+19 - select synonym, next stmtNum synonym
+while w;
+Select w such that Next*(76, w)
+72, 73, 77
+5000
+20 - select synonym, next synonym synonym
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select a such that Next*(a, pr)
+16, 22, 27, 34, 42, 74, 83, 85, 86
+5000
+21 - select synonym, next synonym synonym
+if ifs; call c;
+Select c such that Next*(ifs, c)
+2, 4, 6, 7, 9, 10, 20, 23, 24, 25, 26, 28, 33, 35, 37, 40, 62, 65
+5000
+22 - select synonym, next synonym synonym
+read re; while w;
+Select w such that Next*(w, re)
+18,36,41,46,50,51,66,67,68,72,73,77,79,84
+5000
+23 - select synonym, next synonym synonym
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select re such that Next*(pr, re)
+21, 47, 75, 81
+5000
+24 - select synonym, next synonym synonym
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select a such that Next*(c, a)
+3, 16, 22, 27, 34, 38, 42, 54, 70, 74
+5000
+25 - select synonym, next synonym synonym
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select ifs such that Next*(re, ifs)
+19, 80
+5000
+26 - select synonym, next synonym synonym
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select a such that Next*(a, ifs)
+22, 27, 83, 85, 86
+5000
+27 - select synonym, next synonym synonym
+if ifs; while w; constant cons; 
+Select cons such that Next*(ifs, w)
+1, 2, 3, 4, 5
+5000
+28 - select synonym, next synonym synonym
+stmt s; print pr;
+Select s such that Next*(s, pr)
+1, 7, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 41, 42, 43, 44, 45, 56, 57, 61, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86  
+5000
+29 - select synonym, next undeclared synonym and synonym
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select c such that Next*(pq, c)
+SemanticError
+5000
+30 - select synonym, next synonym synonym
+stmt s; assign a; print pr; read re; if ifs; while w; call c1, c2;
+Select c2 such that Next*(c1, c2)
+4, 6, 9, 10, 12, 13, 15, 17, 20, 23, 24, 25, 26, 28, 33, 35, 37, 40, 43, 45, 48, 49, 52, 55, 65, 69, 76
+5000
+31 - select synonym, next synonym synonym
+stmt s, s1;
+Select s such that Next*(s, s1)
+1,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,41,42,43,44,45,46,47,48,49,5,50,51,52,53,54,55,56,57,58,6,61,62,63,64,66,67,68,69,7,70,71,72,73,74,75,76,77,78,79,8,80,81,82,83,84,85,86,9
+5000

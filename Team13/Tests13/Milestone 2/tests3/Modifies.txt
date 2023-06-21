@@ -1,0 +1,200 @@
+1 - select synonym, modifies wildcard wildcard
+stmt s;
+Select s such that Modifies(_, _)
+SemanticError
+5000
+2 - select synonym, modifies wildcard synonym
+stmt s; variable v;
+Select s such that Modifies(_, v)
+SemanticError
+5000
+3 - select synonym, modifies wildcard and undeclared synonym
+stmt s;
+Select s such that Modifies(_, v)
+SemanticError
+5000
+4 - select synonym, modifies synonym wildcard
+stmt s;
+Select s such that Modifies(s, _)
+1, 2, 3, 4, 5, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 25, 27, 29, 30, 31, 32, 33, 35, 36, 37, 39, 41, 42, 43, 45, 46, 47, 49, 50, 51, 53, 54, 55
+5000
+5 - select synonym, modifies synonym wildcard
+variable v; procedure p;
+Select p such that Modifies(p, _)
+cl455r00m, fru1t5, dr1nk5, on3l1n3
+5000
+6 - select synonym, modifies undeclared synonym and wildcard
+stmt s; procedure p;
+Select s such that Modifies(s3, _)
+SemanticError
+5000
+7 - select synonym, modifies synonym wildcard
+stmt s; procedure p; variable v;
+Select v such that Modifies(s, _)
+b00k, p3nc1l, p3n, m4ng0, p34r, appl3, b4n4n4, w4t3r, t34, c0ff33, ju1c3, y0ghuRT, cl455r00m, fru1t5, dr1nk5
+5000
+8 - select synonym, modifies synonym wildcard
+if ifs;
+Select ifs such that Modifies(ifs, _)
+4, 9, 21, 32
+5000
+9 - select synonym, modifies synonym wildcard
+while w; 
+Select w such that Modifies(w, _)
+1, 16, 45, 46, 35
+5000
+10 - select synonym, modifies procedure varName
+procedure p;
+Select p such that Modifies(p, "fru1t5")
+none
+5000
+11 - select synonym, modifies procedure varName
+procedure p;
+Select p such that Modifies(p, "p3n")
+cl455r00m
+5000
+12 - select synonym, modifies if varName
+if ifs;
+Select ifs such that Modifies(ifs, "w4t3r")
+32, 21, 9, 4
+5000
+13 - select synonym, modifies synonym varName
+if ifs; 
+Select ifs such that Modifies(ifs, "p3nc1l")
+9
+5000
+14 - select synonym, modifies synonym varName
+while w; 
+Select w such that Modifies(w, "ju1c3")
+none
+5000
+15 - select synonym, modifies synonym varName
+assign a;
+Select a such that Modifies(a, "p34r")
+18, 25, 29
+5000
+16 - select synonym, modifies synonym varName
+assign a;
+Select a such that Modifies(a, "c0ff33")
+33, 41, 42
+5000
+17 - select synonym, modifies synonym varName
+call c;
+Select c such that Modifies(c, "y0ghuRT")
+5, 10, 15, 23, 30
+5000
+18 - select synonym, modifies synonym varName
+stmt s;
+Select s such that Modifies(s, "m4ng0")
+1, 4, 5, 9, 10, 14, 21, 22, 27
+5000
+19 - select synonym, modifies undeclared synonym and varName
+stmt s; 
+Select s such that Modifies(s3, "b00k")
+SemanticError
+5000
+20 - select synonym, modifies undeclared synonym and nonexistent varName
+stmt s; 
+Select s such that Modifies(s3, "something")
+SemanticError
+5000
+21 - select synonym, modifies procedure and nonexistent varName
+procedure p;
+Select p such that Modifies(p, "some")
+none
+5000
+22 - select synonym, modifies stmtNum synonym
+variable v;
+Select v such that Modifies(4, v)
+b00k, p3n, m4ng0, p34r, appl3, b4n4n4, w4t3r, t34, c0ff33, y0ghuRT, cl455r00m
+5000
+23 - select synonym, modifies stmtNum synonym
+variable v;
+Select v such that Modifies(35, v)
+w4t3r
+5000
+24 - select synonym, modifies stmtNum synonym
+variable v;
+Select v such that Modifies(45, v)
+w4t3r, t34
+5000
+25 - select synonym, modifies procName synonym
+variable v;
+Select v such that Modifies("dr1nk5", v)
+w4t3r, t34, c0ff33, y0ghuRT, cl455r00m
+5000
+26 - select synonym, modifies procName synonym
+variable v;
+Select v such that Modifies("cl455r00m", v)
+b00k, p3nc1l, p3n, m4ng0, p34r, appl3, b4n4n4, w4t3r, t34, c0ff33, y0ghuRT, cl455r00m
+5000
+27 - select synonym, modifies nonexistent stmtNum and synonym
+variable v;
+Select v such that Modifies(65, v)
+none
+5000
+28 - select synonym, modifies stmtNum and undeclared synonym
+stmt s;
+Select s such that Modifies(27, v)
+SemanticError
+5000
+29 - select synonym, modifies nonexistent stmtNum and undeclared synonym
+stmt s; 
+Select s such that Modifies(99, s3)
+SemanticError
+5000
+30 - select synonym, modifies stmtNum varName
+constant cons;
+Select cons such that Modifies(1, "p3n")
+0, 1, 2, 3, 4, 5
+5000
+31 - select synonym, modifies stmtNum varName
+constant cons;
+Select cons such that Modifies(22, "appl3")
+none
+5000
+32 - select synonym, modifies stmtNum varName
+if ifs;
+Select ifs such that Modifies(ifs, "w4t3r")
+4, 9, 21, 32
+5000
+33 - select synonym, modifies stmtNum and nonexistent varName
+stmt s;
+Select s such that Modifies(77, "some")
+none
+5000
+34 - select synonym, modifies nonexistent stmtNum and varName
+stmt s;
+Select s such that Modifies(101, "red")
+none
+5000
+35 - select synonym, modifies nonexistent stmtNum and nonexistent varName
+stmt s;
+Select s such that Modifies(103, "variablex")
+none
+5000
+36 - select synonym, modifies synonym synonym
+if ifs; variable v;
+Select ifs such that Modifies(ifs, v)
+4, 9, 21, 32
+5000
+37 - select synonym, modifies synonym synonym
+while w; variable v;
+Select w such that Modifies(w, v)
+1, 16, 35, 45, 46
+5000
+38 - select synonym, modifies synonym synonym
+read re; variable v;
+Select re such that Modifies(re, v)
+2, 14, 39, 37, 47, 50
+5000
+39 - select synonym, modifies synonym and synonym
+assign a; variable v;
+Select a such that Modifies(a, v)
+3, 7, 8, 12, 13, 17, 18, 19, 22, 25, 27, 29, 31, 33, 36, 41, 42, 43, 49, 51, 53, 55
+5000
+40 - select synonym, modifies synonym and undeclared synonym
+stmt s;
+Select s such that Modifies(s, v)
+SemanticError
+5000

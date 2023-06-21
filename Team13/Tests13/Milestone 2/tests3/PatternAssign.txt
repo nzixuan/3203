@@ -1,0 +1,65 @@
+1 - Assign Valid Simple
+assign a;
+Select a pattern a("p3n",_)
+7
+5000
+2 - Assign Valid Complex
+assign a;
+Select a pattern a("p3n", "p3nc1l+b00k")
+7
+5000
+3 - Assign Valid Simple Multi return
+assign a;
+Select a pattern a(_,"b4n4n4")
+27
+5000
+4 - Assign Valid Simple
+assign a;
+Select BOOLEAN pattern a(_,"b4n4n4")
+TRUE
+5000
+5 - Assign Invalid
+assign a;
+Select BOOLEAN pattern a(_,"b4n4n4"
+SyntaxError
+5000
+6 - Assign Invalid
+assign a;
+Select BOOLEAN pattern a("b4n4n4")
+SyntaxError
+5000
+7 - Assign Invalid
+assign a;
+Select BOOLEAN pattern a(_,"b4n4n4",_)
+SyntaxError
+5000
+8 - Assign Invalid
+assign a;
+Select BOOLEAN pattern a1(_,"b4n4n4")
+SemanticError
+5000
+9 - Assign Invalid
+assign a;
+Select BOOLEAN pattern a(_,b4n4n4)
+SyntaxError
+5000
+10 - Assign Invalid non declared selected
+assign a;
+Select a1 pattern a(_,"b4n4n4")
+SemanticError
+5000
+11 - Assign Valid Simple Multi return
+assign a;
+Select a pattern a(_,_"b4n4n4"_)
+17, 27, 25
+5000
+12 - Assign Valid Simple RHS constant
+assign a;
+Select a pattern a(_, "5")
+36
+5000
+13 - Assign Valid Simple RHS constant partial
+assign a;
+Select a pattern a(_, _"1"_)
+13, 17, 53
+5000

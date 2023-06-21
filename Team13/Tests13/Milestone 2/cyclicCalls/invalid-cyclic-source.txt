@@ -1,0 +1,17 @@
+procedure Procedure1 {
+	v=v+d;
+	v = lmnop;
+	lmni = asd + asdzxc;
+	call Procedure2;
+}
+
+procedure Procedure2 {
+	mno = mno;
+	read print;
+	print read;
+	call Procedure3;
+}
+
+procedure Procedure3 {
+	call Procedure1;
+}

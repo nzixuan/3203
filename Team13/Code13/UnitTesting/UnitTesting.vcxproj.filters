@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CallsStorageTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="CallsTStorageTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignExtractorTest.cpp">
+      <Filter>Source Files\SP</Filter>
+    </ClCompile>
+    <ClCompile Include="FollowsStorageTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="FollowsTStorageTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="ParentTStorage.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="ASTParserTest.cpp">
+      <Filter>Source Files\SP</Filter>
+    </ClCompile>
+    <ClCompile Include="PKBTests.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="NextStorageTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserAffectsTTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Affects</Filter>
+    </ClCompile>
+    <ClCompile Include="CallsStorageTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="UsesStorageTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalCallsTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalFollowsPatternTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalFollowsTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalFollowsTTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalModifiesPTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalNoClauseTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalPatternAssignTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="TableTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="testUtility.cpp">
+      <Filter>Source Files\QPS\QueryParser\testUtility</Filter>
+    </ClCompile>
+    <ClCompile Include="TokenizerTest.cpp">
+      <Filter>Source Files\Tokenizer</Filter>
+    </ClCompile>
+    <ClCompile Include="ParentTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="ModifiesTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\General</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserUsesTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Uses</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserFollowsTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Follows</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserFollowsTTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Follows</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserModifiesTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Modifies</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserParentTTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserParentTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Parent</Filter>
+    </ClCompile>
+    <ClCompile Include="AssignStorageTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserAffectsTTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Affects</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserAffectsTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Affects</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserCallsTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Calls</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserCallsTTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Calls</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserNextTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Next</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserNextTTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Next</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserPatternAssignTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserAndTest.cpp" />
+    <ClCompile Include="CFGParserTest.cpp">
+      <Filter>Source Files\SP</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserPatternIfTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserPatternWhileTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserAndTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\And</Filter>
+    </ClCompile>
+    <ClCompile Include="NextTQuerierTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserAndTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\And</Filter>
+    </ClCompile>
+    <ClCompile Include="IfStorageTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="WhileStorageTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalPatternIfWhileTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalParentTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalModifiesUsesTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalSameSynTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="CFGStorageTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="AffectsQuerierTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="AffectsTQuerierTest.cpp">
+      <Filter>Source Files\PKB</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryParserWithTest.cpp">
+      <Filter>Source Files\QPS\QueryParser\With</Filter>
+    </ClCompile>
+    <ClCompile Include="ClauseOptimisationTests.cpp">
+      <Filter>Source Files\QPS\Clauses</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalSelectAttrTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="EvalWithTest.cpp">
+      <Filter>Source Files\QPS\QueryEvaluator</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testUtility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{25bd4498-2d59-4bfd-8971-e4138d7cc574}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b241ae63-1266-4cdf-bd8c-9243d191c5ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SP">
+      <UniqueIdentifier>{58564479-433c-486e-9887-6f5c2b5be8f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS">
+      <UniqueIdentifier>{cf46eb9b-4df6-405f-97bf-1ddcc4b4a4a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PKB">
+      <UniqueIdentifier>{0b1b605a-b34f-4f1c-b50f-7d7c4a190542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryEvaluator">
+      <UniqueIdentifier>{873b5bae-636f-4de2-a399-f74226397a5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser">
+      <UniqueIdentifier>{25f8b27c-e41a-4cd0-aaf8-18530d4ab8ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser\testUtility">
+      <UniqueIdentifier>{f20a71a4-0dcf-4e43-86a7-fa26bf64b7e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tokenizer">
+      <UniqueIdentifier>{c8fa0a4d-b5c3-4259-b627-44a6d3be21d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser\Follows">
+      <UniqueIdentifier>{2f73b396-2858-41cc-bd32-aa03cdebd3f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser\General">
+      <UniqueIdentifier>{df096839-52f6-4e57-895b-bade1dd95ee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser\Modifies">
+      <UniqueIdentifier>{4c340800-fdc6-4232-88fa-919bb82f6207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser\Parent">
+      <UniqueIdentifier>{2be0bd7e-4d01-4a5b-a1b0-708edd18c2d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser\Uses">
+      <UniqueIdentifier>{93a8f826-fa02-4199-bbe9-b149b54a3c74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser\Affects">
+      <UniqueIdentifier>{40c6a133-2137-477b-961d-9b22d02bd11d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser\Calls">
+      <UniqueIdentifier>{7394d974-2127-4fda-909e-215b75438048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser\Next">
+      <UniqueIdentifier>{c696e400-35be-42b5-9819-dff393b6d664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser\Pattern">
+      <UniqueIdentifier>{1d036a86-9c64-431e-b9ce-bc4c70134962}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser\And">
+      <UniqueIdentifier>{bd766d7b-8347-4724-827c-b040e018dc54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\QueryParser\With">
+      <UniqueIdentifier>{e88e5443-0dff-44d3-a06f-f7931833f831}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QPS\Clauses">
+      <UniqueIdentifier>{6f7ca32b-9111-49a5-9d17-76e8aa58f66c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

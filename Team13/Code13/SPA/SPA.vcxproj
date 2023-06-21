@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\AffectsQuerier.cpp" />
+    <ClCompile Include="..\source\AndExtractor.cpp" />
+    <ClCompile Include="..\source\AST.cpp" />
+    <ClCompile Include="..\source\AttrRef.cpp" />
+    <ClCompile Include="..\source\CFG.cpp" />
+    <ClCompile Include="..\source\CFGParser.cpp" />
+    <ClCompile Include="..\source\CFGStorage.cpp" />
+    <ClCompile Include="..\source\CFGVisitor.cpp" />
+    <ClCompile Include="..\source\Clause.cpp" />
+    <ClCompile Include="..\source\ClauseManager.cpp" />
+    <ClCompile Include="..\source\ClauseNode.cpp" />
+    <ClCompile Include="..\source\common.cpp" />
+    <ClCompile Include="..\source\CtrlVarStorage.cpp" />
+    <ClCompile Include="..\source\DeclarationExtractor.cpp" />
+    <ClCompile Include="..\source\DesignExtractor.cpp" />
+    <ClCompile Include="..\source\DesignExtractorVisitor.cpp" />
+    <ClCompile Include="..\source\FollowsTStorage.h" />
+    <ClCompile Include="..\source\Group.cpp" />
+    <ClCompile Include="..\source\Node.cpp" />
+    <ClCompile Include="..\source\Number.cpp" />
+    <ClCompile Include="..\source\ParentTStorage.h" />
+    <ClCompile Include="..\source\Pattern.cpp" />
+    <ClCompile Include="..\source\PatternExtractor.cpp" />
+    <ClCompile Include="..\source\PatternStorage.cpp" />
+    <ClCompile Include="..\source\PKB.cpp" />
+    <ClCompile Include="..\source\PKBEntity.cpp" />
+    <ClCompile Include="..\source\PQLExcept.cpp" />
+    <ClCompile Include="..\source\PQLList.cpp" />
+    <ClCompile Include="..\source\PQLUtil.cpp" />
+    <ClCompile Include="..\source\QueryExtractor.cpp" />
+    <ClInclude Include="..\source\AffectsTQuerier.h" />
+    <ClInclude Include="..\source\ClauseNode.h" />
+    <ClInclude Include="..\source\Node.h" />
+    <ClInclude Include="..\source\QueryOptimiser.h" />
+    <ClInclude Include="..\source\RelArg.h" />
+    <ClCompile Include="..\source\QueryOptimiser.cpp" />
+    <ClCompile Include="..\source\RelArg.cpp" />
+    <ClCompile Include="..\source\RelArgsExtractor.cpp" />
+    <ClCompile Include="..\source\SelectClauseExtractor.cpp" />
+    <ClCompile Include="..\source\PatternEvaluator.cpp" />
+    <ClCompile Include="..\source\SourceArg.cpp" />
+    <ClCompile Include="..\source\SuchThatEvaluator.cpp" />
+    <ClCompile Include="..\source\SuchThatExtractor.cpp" />
+    <ClCompile Include="..\source\SuchThatQuerier.cpp" />
+    <ClCompile Include="..\source\SuchThatTQuerier.cpp" />
+    <ClCompile Include="..\source\SynNode.cpp" />
+    <ClCompile Include="..\source\Synonym.cpp" />
+    <ClCompile Include="..\source\Table.cpp" />
+    <ClCompile Include="..\source\QueryValidator.cpp" />
+    <ClCompile Include="..\source\QueryEvaluator.cpp" />
+    <ClCompile Include="..\source\ASTParser.cpp" />
+    <ClCompile Include="..\source\Query.cpp" />
+    <ClCompile Include="..\source\QueryParser.cpp" />
+    <ClCompile Include="..\source\SuchThatStorage.cpp" />
+    <ClCompile Include="..\source\SPA.cpp" />
+    <ClCompile Include="..\source\SuchThat.cpp" />
+    <ClCompile Include="..\source\Tokenizer.cpp" />
+    <ClCompile Include="..\source\Wildcard.cpp" />
+    <ClCompile Include="..\source\With.cpp" />
+    <ClCompile Include="..\source\WithEvaluator.cpp" />
+    <ClCompile Include="..\source\WithExtractor.cpp" />
+    <ClInclude Include="..\source\SuchThatQuerier.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\source\AffectsQuerier.h" />
+    <ClInclude Include="..\source\AndExtractor.h" />
+    <ClInclude Include="..\source\AST.h" />
+    <ClInclude Include="..\source\AssignStorage.h" />
+    <ClInclude Include="..\source\AttrRef.h" />
+    <ClInclude Include="..\source\CallsStorage.h" />
+    <ClInclude Include="..\source\CallsTStorage.h" />
+    <ClInclude Include="..\source\CFG.h" />
+    <ClInclude Include="..\source\CFGStorage.h" />
+    <ClInclude Include="..\source\CFGVisitor.h" />
+    <ClInclude Include="..\source\ClauseManager.h" />
+    <ClInclude Include="..\source\common.h" />
+    <ClInclude Include="..\source\DeclarationExtractor.h" />
+    <ClInclude Include="..\source\CtrlVarStorage.h" />
+    <ClInclude Include="..\source\DesignExtractor.h" />
+    <ClInclude Include="..\source\DesignExtractorVisitor.h" />
+    <ClInclude Include="..\source\Group.h" />
+    <ClInclude Include="..\source\IfStorage.h" />
+    <ClInclude Include="..\source\Number.h" />
+    <ClInclude Include="..\source\PatternExtractor.h" />
+    <ClInclude Include="..\source\PatternStorage.h" />
+    <ClInclude Include="..\source\NextStorage.h" />
+    <ClInclude Include="..\source\NextTQuerier.h" />
+    <ClInclude Include="..\source\PQLUtil.h" />
+    <ClInclude Include="..\source\QueryExtractor.h" />
+    <ClInclude Include="..\source\RelArgsExtractor.h" />
+    <ClInclude Include="..\source\SelectClauseExtractor.h" />
+    <ClInclude Include="..\source\PatternEvaluator.h" />
+    <ClInclude Include="..\source\SourceArg.h" />
+    <ClInclude Include="..\source\SuchThatEvaluator.h" />
+    <ClInclude Include="..\source\SuchThatExtractor.h" />
+    <ClInclude Include="..\source\QueryEvaluator.h" />
+    <ClInclude Include="..\source\SuchThatQueriable.h" />
+    <ClInclude Include="..\source\SuchThatTQuerier.h" />
+    <ClInclude Include="..\source\SynNode.h" />
+    <ClInclude Include="..\source\Synonym.h" />
+    <ClInclude Include="..\source\Table.h" />
+    <ClInclude Include="..\source\PKBEntity.h" />
+    <ClInclude Include="..\source\PQLExcept.h" />
+    <ClInclude Include="..\source\PQLList.h" />
+    <ClInclude Include="..\source\SimpleParser.h" />
+    <ClInclude Include="..\source\Clause.h" />
+    <ClInclude Include="..\source\Pattern.h" />
+    <ClInclude Include="..\source\Query.h" />
+    <ClInclude Include="..\source\PQLGrammar.h" />
+    <ClInclude Include="..\source\PQLToken.h" />
+    <ClInclude Include="..\source\QueryParser.h" />
+    <ClInclude Include="..\source\SPA.h" />
+    <ClInclude Include="..\source\PKB.h" />
+    <ClInclude Include="..\source\SuchThat.h" />
+    <ClInclude Include="..\source\SuchThatStorage.h" />
+    <ClInclude Include="..\source\UsesStorage.h" />
+    <ClInclude Include="..\source\ModifiesStorage.h" />
+    <ClInclude Include="..\source\ParentStorage.h" />
+    <ClInclude Include="..\source\Token.h" />
+    <ClInclude Include="..\source\Tokenizer.h" />
+    <ClInclude Include="..\source\FollowsStorage.h" />
+    <ClInclude Include="..\source\QueryValidator.h" />
+    <ClInclude Include="..\source\WhileStorage.h" />
+    <ClInclude Include="..\source\Wildcard.h" />
+    <ClInclude Include="..\source\With.h" />
+    <ClInclude Include="..\source\WithEvaluator.h" />
+    <ClInclude Include="..\source\WithExtractor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DC21A1EA-D2C6-4D14-A2B4-E025B64BDE81}</ProjectGuid>
+    <RootNamespace>SPA</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

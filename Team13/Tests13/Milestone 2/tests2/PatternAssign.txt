@@ -1,0 +1,225 @@
+1 - pattern assign full match
+assign a;
+Select a pattern a(_, "shoes + (pants * (sandals + 1) / (2 + (3 * ( (4 % 3) + 5) / (heels * 2 + (4 * 3))))) * shirt")
+3
+5000
+2 - pattern assign full match
+assign a;
+Select a pattern a(_, "three*two*one")
+16
+5000
+3 - pattern assign full match
+assign a;
+Select a pattern a(_, "   three    *   two *   one   ")
+16
+5000
+4 - pattern assign full match
+assign a;
+Select a pattern a(_, "three*(two*one)")
+none
+5000
+5 - pattern assign full match
+assign a;
+Select a pattern a(_, "(three*two)*one")
+16
+5000
+6 - pattern assign full match
+assign a;
+Select a pattern a("powerpoint", "excel")
+22
+5000
+7 - pattern assign full match
+assign a;
+Select a pattern a("toothbrush", "toothpaste / soap")
+59
+5000
+8 - pattern assign full match
+assign a;
+Select a pattern a("powerpoint", "excel")
+22
+5000
+9 - pattern assign full match
+assign a;
+Select a pattern a(_, "three")
+none
+5000
+10 - pattern assign partial match
+assign a;
+Select a pattern a(_, _"shoes"_)
+3
+5000
+11 - pattern assign partial match
+assign a;
+Select a pattern a(_, _"pants"_)
+3
+5000
+12 - pattern assign partial match
+assign a;
+Select a pattern a(_, _"sandals + 1"_)
+3
+5000
+13 - pattern assign partial match
+assign a;
+Select a pattern a(_, _"pants * sandals"_)
+none
+5000
+14 - pattern assign partial match
+assign a;
+Select a pattern a(_, _"shoes + pants"_)
+none
+5000
+15 - pattern assign partial match
+assign a;
+Select a pattern a(_, _"4 % 3"_)
+3
+5000
+16 - pattern assign partial match
+assign a;
+Select a pattern a(_, _"((4%3)+5)"_)
+3
+5000
+17 - pattern assign partial match
+assign a;
+Select a pattern a(_, _"3+5"_)
+none
+5000
+18 - pattern assign partial match
+assign a;
+Select a pattern a(_, _"((((4%3)+5)))"_)
+3
+5000
+19 - pattern assign partial match
+assign a;
+Select a pattern a(_, _"heels*2"_)
+3
+5000
+20 - pattern assign partial match
+assign a;
+Select a pattern a(_, _"three * one"_)
+none
+5000
+21 - pattern assign partial match
+assign a;
+Select a pattern a("powerpoint", _"excel"_)
+22, 27
+5000
+22 - pattern assign partial match
+assign a;
+Select a pattern a("toothbrush", _"shampoo"_)
+64
+5000
+23 - pattern assign partial match
+assign a;
+Select a pattern a("toothbrush", _"ham"_)
+none
+5000
+24 - pattern assign partial match
+assign a;
+Select a pattern a("three", _"on"_)
+none
+5000
+25 - pattern assign partial match
+assign a;
+Select a pattern a("cat", _"cat"_)
+74
+5000
+26 - select boolean, pattern assign string wildcard
+assign a;
+Select BOOLEAN pattern a("cat", _)
+TRUE
+5000
+27 - select boolean, pattern assign string wildcard
+assign a;
+Select BOOLEAN pattern a("pepsi", _)
+FALSE
+5000
+28 - select boolean, pattern assign string wildcard
+assign a;
+Select BOOLEAN pattern a("sprite", _)
+TRUE
+5000
+29 - select boolean, pattern assign string wildcard
+assign a;
+Select BOOLEAN pattern a("fanta", _)
+TRUE
+5000
+30 - select boolean, pattern assign string wildcard
+assign a;
+Select BOOLEAN pattern a("dog", _)
+FALSE
+5000
+31 - select boolean, pattern assign string wildcard
+assign a;
+Select BOOLEAN pattern a("3", _)
+SyntaxError
+5000
+32 - select all assign statement
+assign a;
+Select a pattern a(_, _)
+3, 16, 22, 27, 34, 38, 42, 54, 59, 64, 70, 74, 83, 85, 86
+5000
+33 - select all assign statement
+assign a; variable v;
+Select a pattern a(v, _)
+3, 16, 22, 27, 34, 38, 42, 54, 59, 64, 70, 74, 83, 85, 86
+5000
+34 - select all assign statement
+assign a; variable v;
+Select v pattern a(v, _)
+shoes, three, powerpoint, green, blue, grey, pentagon, toothbrush, fish, cat, sprite, coke, fanta
+5000
+35 - invalid args
+assign a;
+Select a pattern a(_, _""_)
+SyntaxError
+5000
+36 - invalid args
+assign a;
+Select a pattern a(_, _" "_)
+SyntaxError
+5000
+37 - invalid args
+assign a;
+Select a pattern a(_, " ")
+SyntaxError
+5000
+38 - invalid args
+assign a;
+Select a pattern a(_, _"+"_)
+SyntaxError
+5000
+39 - invalid args
+assign a;
+Select a pattern a(_, _"-"_)
+SyntaxError
+5000
+40 - invalid args
+assign a;
+Select a pattern a(_, _"*"_)
+SyntaxError
+5000
+41 - invalid args
+assign a;
+Select a pattern a(_, _"/"_)
+SyntaxError
+5000
+42 - invalid args
+assign a;
+Select a pattern a(_, _"%"_)
+SyntaxError
+5000
+43 - invalid args
+assign a;
+Select a pattern a(_, _"("_)
+SyntaxError
+5000
+44 - invalid args
+assign a;
+Select a pattern a(_, _")"_)
+SyntaxError
+5000
+45 - invalid args
+assign a;
+Select a pattern a(_, _, _)
+SyntaxError
+5000

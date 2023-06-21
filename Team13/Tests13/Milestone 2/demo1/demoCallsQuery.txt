@@ -1,0 +1,25 @@
+1 - Get all procedures called by procedure
+procedure p1, p2;
+Select p2 such that Calls(p1, p2)
+Prod1, Prod3, Prod4
+5000
+2 - Get all procedures that calls procedures
+procedure p1, p2;
+Select p1 such that Calls(p1, p2)
+Prod2, Prod3, Prod4, Prod5
+5000
+3 - Test CallsStar
+procedure p;
+Select p such that Calls*(p, "Prod1")
+Prod2, Prod3, Prod4, Prod5
+5000
+4 - Test CallsStar2
+procedure p;
+Select p such that Calls*(p, "Prod2")
+none
+5000
+4 - Test CallsStar3
+procedure p1, p2;
+Select p2 such that Calls*(p1, p2)
+Prod1, Prod3, Prod4
+5000

@@ -1,0 +1,70 @@
+1 - select tuples of all if statements and follows one synonym
+stmt s; if ifs;
+Select <s, ifs> such that Follows(15, s)
+16 1,16 19,16 30,16 56,16 57,16 61,16 80
+5000
+2 - select tuples of all statements that are next to each other in while stmt 11
+stmt s, s1;
+Select <s, s1> such that Next(s, s1) such that Parent(11, s)
+12 13, 13 14, 14 15, 15 16, 16 17, 17 11
+5000
+3 - select tuples of all statements that are next to each other in while stmt 11 with and
+stmt s, s1;
+Select <s, s1> such that Next(s, s1) and Parent(11, s)
+12 13, 13 14, 14 15, 15 16, 16 17, 17 11
+5000
+4 - select tuples of 3 same procedure names
+procedure p;
+Select <p, p, p>
+ifOnly ifOnly ifOnly, whileOnly whileOnly whileOnly, ifInsideWhile ifInsideWhile ifInsideWhile, whileInsideIf whileInsideIf whileInsideIf, doubleWhile doubleWhile doubleWhile, whileInsideWhile whileInsideWhile whileInsideWhile, ifInsideIf ifInsideIf ifInsideIf, whileInsideWhileInsideWhile whileInsideWhileInsideWhile whileInsideWhileInsideWhile, doubleWhileInsideWhile doubleWhileInsideWhile doubleWhileInsideWhile, ifAndWhileInsideWhile ifAndWhileInsideWhile ifAndWhileInsideWhile
+5000
+5 - select tuples of 3 different valid relations
+stmt s1; call c; print p;
+Select <s1, c, p> such that Parent(s1, 42) and Follows(42, c) and Follows(43, p)
+41 43 44
+5000
+6 - select tuples of 3 different valid relations
+stmt s1; call c; print p;
+Select <s1, c, p> such that Parent(s1, 42) and Follows*(42, c) and Follows(43, p)
+41 43 44, 41 45 44
+5000
+7 - select tuples of while statement and next one synonym
+while w; stmt s;
+Select <w, s> such that Next(21, s)
+11 22, 18 22, 31 22, 36 22, 41 22, 46 22, 50 22, 51 22, 66 22, 67 22, 68 22, 72 22, 73 22, 77 22, 79 22, 84 22
+5000
+8 - select tuples of BOOLEAN
+while w; if ifs; 
+Select <w, ifs>
+11 1,11 19,11 30,11 56,11 57,11 61,11 80,18 1,18 19,18 30,18 56,18 57,18 61,18 80,31 1,31 19,31 30,31 56,31 57,31 61,31 80,36 1,36 19,36 30,36 56,36 57,36 61,36 80,41 1,41 19,41 30,41 56,41 57,41 61,41 80,46 1,46 19,46 30,46 56,46 57,46 61,46 80,50 1,50 19,50 30,50 56,50 57,50 61,50 80,51 1,51 19,51 30,51 56,51 57,51 61,51 80,66 1,66 19,66 30,66 56,66 57,66 61,66 80,67 1,67 19,67 30,67 56,67 57,67 61,67 80,68 1,68 19,68 30,68 56,68 57,68 61,68 80,72 1,72 19,72 30,72 56,72 57,72 61,72 80,73 1,73 19,73 30,73 56,73 57,73 61,73 80,77 1,77 19,77 30,77 56,77 57,77 61,77 80,79 1,79 19,79 30,79 56,79 57,79 61,79 80,84 1,84 19,84 30,84 56,84 57,84 61,84 80
+5000
+9 - select nonexistent tuples with false relations
+stmt s; assign a; print p;
+Select <s, a, p> such that Next(81, 83) and Follows(s, 82) and Parent(s, 81)
+none
+5000
+10 - select tuples with false pattern condition
+stmt s; variable v; procedure p; assign a;
+Select <a, s, v> pattern a ("shoess", _)
+none
+5000
+11 - select tuples with pattern condition
+variable v; assign a;
+Select <a, v> pattern a (v, _"three * two"_)
+16 three
+5000
+12 - select nonexistent tuples with next follows and parents relation
+stmt s, s1, s2, s3, s4, s5, s6; variable v;
+Select <s, s1, s2, s3> such that Next*(s, s1) and Follows*(s1, s2) such that Parent(s2, 21) and Next*(21, 32)
+none
+5000
+13 - select undeclared tuples
+stmt s, s1, s2, s3, s4, s5, s6; variable v;
+Select <s, v1> such that Next*(18, s) and Uses("ifAndWhileInsideWhile", v)
+SemanticError
+5000
+14 - error
+while w; if ifs; 
+Select <w, BOOLEAN>
+SemanticError
+5000

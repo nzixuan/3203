@@ -1,0 +1,110 @@
+1 - If Valid Simple
+if ifs;
+Select ifs pattern ifs("p3n", _ , _)
+9
+5000
+2 - If Valid Complex
+if ifs;
+Select ifs pattern ifs("p34r", _, _)
+21
+5000
+3 - If no result
+if ifs;
+Select ifs pattern ifs("asdzxc",_,_)
+none
+5000
+4 - If invalid while pattern
+if ifs;
+Select ifs pattern ifs("p34r",_)
+SyntaxError
+5000
+5 - If invalid
+if ifs;
+Select ifs pattern ifs("p34r","asd","asd")
+SyntaxError
+5000
+6 - If invalid
+if ifs;
+Select ifs pattern ifs("p34r",_,"asd")
+SyntaxError
+5000
+7 - If invalid
+if ifs;
+Select ifs pattern ifs("p34r","asd",_)
+SyntaxError
+5000
+8 - If invalid
+if ifs;
+Select ifs pattern ifs("p34r","m4ng0","b4n4n4")
+SyntaxError
+5000
+9 - If invalid
+if ifs;
+Select ifs pattern ifs("p3      4r",_,_)
+SyntaxError
+5000
+10 - If invalid
+if ifs;
+Select ifs pattern ifs("p3                         4r","_,_)
+SyntaxError
+5000
+11 - If invalid
+if ifs;
+Select ifs pattern ifs("p34r","_","_")
+SyntaxError
+5000
+if ifs;
+12- If invalid no quotation
+Select ifs pattern ifs(p34r,_,_)
+SyntaxError
+5000
+13 - If invalid no proper synonym before bracket
+if ifs;
+Select ifs pattern if("p34r",_,_)
+SemanticError
+5000
+14 - If invalid extra _
+if ifs;
+Select ifs pattern ifs("p34r",_,_,_)
+SyntaxError
+5000
+15 - If invalid no closing bracket
+if ifs;
+Select ifs pattern ifs("p34r",_,_
+SyntaxError
+5000
+16 - If wrong select
+if ifs;
+Select if pattern ifs("p34r",_,_)
+SemanticError
+5000
+17 - if wrong
+if ifs, ifs1;
+Select ifs pattern ifs1("p34r",_,_)
+4, 9, 21, 32
+5000
+18
+if ifs, ifs1;
+Select ifs1 pattern ifs("p34r",_,_)
+4, 9, 21, 32
+5000
+19
+if ifs, ifs1;
+Select ifs1 pattern ifs("cl455r00m",_,_)
+none
+5000
+20
+if ifs, ifs1;
+Select ifs1 pattern ifs("cl455r00m",_,_)
+none
+5000
+21
+if ifs, ifs1;
+Select BOOLEAN pattern ifs("cl455r00m",_,_)
+FALSE
+5000
+22
+if ifs, ifs1;
+Select BOOLEAN pattern ifs("p34r")
+SyntaxError
+5000

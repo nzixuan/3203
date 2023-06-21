@@ -1,0 +1,45 @@
+1- Boolean no clause
+
+Select BOOLEAN
+TRUE
+5000
+2- Boolean such that Clause
+
+Select BOOLEAN such that Follows(17,18)
+TRUE
+5000
+3- Boolean pattern Clause
+if w;
+Select BOOLEAN pattern w("m4ng0",_,_)
+TRUE
+5000
+4- Invalid BOOLEAN spelling SemanticError;
+if w;
+Select BOOLEAn pattern w("m4ng0",_,_)
+SemanticError
+5000
+5- Invalid BOOLEAN return none if clauses are wrong;
+if w;
+Select BOOLEAN such that pattern w("w4t3r",_,_)
+SyntaxError
+5000
+6- Invalid BOOLEAN returns none
+while if;
+Select BOOLEAN pattern if("w4t3r",_,_)
+SyntaxError
+5000;
+7 - Valid BOOLEAN no results
+
+Select BOOLEAN such that Next(29, 28)
+FALSE
+5000;
+8 - Valid BOOLEAN clauses with BOOLEAN returns and list return
+procedure p1, p2;
+Select BOOLEAN such that Next(28,29) and Calls(p1, p2)
+TRUE
+5000
+9 - Valid BOOLEAN clauses with BOOLEAN returns only.
+procedure p1, p2;
+Select BOOLEAN such that Calls(p1, "on3l1n3") and Uses("on3l1n3", "dr1nk5")
+TRUE
+5000
